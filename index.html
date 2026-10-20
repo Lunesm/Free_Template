@@ -8,130 +8,138 @@
     <title>Galeri Template Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
     <style>
       :root{
-        --bg:#edf0f5; --bg2:#dbe2ee; --surface:#ffffff; --surface2:#e7ebf2; --ink:#171a21; --muted:#5d6572;
-        --line:#ccd4df; --accent:#d2441c; --accent-ink:#fff7f0; --chip:#ffffff;
-        --shadow:0 2px 3px rgba(16,20,30,.07),0 26px 44px -18px rgba(16,20,30,.32);
+        --bg:#f8f6f1; --bg2:#efeade; --surface:#fffefb; --surface2:#f3efe3; --ink:#171410; --muted:#6e675a;
+        --line:#ddd4bf; --accent:#94712a; --accent-ink:#faf5e9; --chip:#fffefb;
+        --shadow:0 1px 2px rgba(23,20,16,.05),0 30px 50px -26px rgba(23,20,16,.32);
         color-scheme:light;
       }
       @media (prefers-color-scheme: dark){
         :root{
-          --bg:#0c0f16; --bg2:#151b29; --surface:#171c28; --surface2:#1f2635; --ink:#eef1f7; --muted:#99a3b4;
-          --line:#2b3347; --accent:#ff6a3d; --accent-ink:#1c120a; --chip:#171c28;
-          --shadow:0 2px 3px rgba(0,0,0,.4),0 26px 44px -18px rgba(0,0,0,.65);
+          --bg:#0b0a09; --bg2:#14120e; --surface:#161410; --surface2:#1f1c15; --ink:#efe7d2; --muted:#a79d86;
+          --line:#2d2920; --accent:#c8a45e; --accent-ink:#171410; --chip:#161410;
+          --shadow:0 1px 2px rgba(0,0,0,.5),0 30px 50px -26px rgba(0,0,0,.8);
           color-scheme:dark;
         }
       }
+      ::selection{background:var(--accent);color:var(--accent-ink)}
+      :focus-visible{outline:1.5px solid var(--accent);outline-offset:2px}
       html{scroll-behavior:smooth}
       body{margin:0;color:var(--ink);font-family:"Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased;
-        background:
-          radial-gradient(900px 480px at 88% -80px, var(--bg2), transparent 70%),
-          radial-gradient(700px 420px at -120px 30%, var(--bg2), transparent 70%),
-          linear-gradient(165deg, var(--bg) 0%, var(--bg2) 130%);
-        background-attachment:fixed}
+        background:linear-gradient(178deg, var(--bg) 0%, var(--bg2) 150%);background-attachment:fixed}
       .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
       /* ---------- header ---------- */
-      header.top{padding:44px 0 8px;position:relative}
-      /* ---------- dekorasi kubus 3D ---------- */
-      .scene3d{position:absolute;right:6px;top:16px;width:150px;height:130px;pointer-events:none}
-      .cube{position:absolute;transform-style:preserve-3d;animation:spin3d 16s linear infinite}
-      .cube i{position:absolute;inset:0;border:1px solid rgba(0,0,0,.14)}
-      .cube .f{background:var(--accent)}
-      .cube .t{background:color-mix(in srgb, var(--accent) 45%, #ffffff);transform:rotateX(90deg)}
-      .cube .r{background:color-mix(in srgb, var(--accent) 62%, #000000);transform:rotateY(90deg)}
-      .cube.big{width:62px;height:62px;right:16px;top:8px}
-      .cube.big .f{transform:translateZ(31px)} .cube.big .t{transform:rotateX(90deg) translateZ(31px)} .cube.big .r{transform:rotateY(90deg) translateZ(31px)}
-      .cube.small{width:32px;height:32px;left:2px;bottom:4px;animation-duration:11s;animation-direction:reverse;opacity:.85}
-      .cube.small .f{transform:translateZ(16px)} .cube.small .t{transform:rotateX(90deg) translateZ(16px)} .cube.small .r{transform:rotateY(90deg) translateZ(16px)}
-      @keyframes spin3d{from{transform:rotateX(-22deg) rotateY(0deg)}to{transform:rotateX(-22deg) rotateY(360deg)}}
-      @media (max-width:760px){ .scene3d{display:none} }
-      @media (prefers-reduced-motion: reduce){ .cube{animation:none;transform:rotateX(-22deg) rotateY(32deg)} }
-      .kicker{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
-      h1.title{font-size:clamp(34px,6vw,58px);line-height:1.02;font-weight:900;letter-spacing:-.02em;margin:10px 0 12px;max-width:16ch}
-      .lede{font-size:clamp(15px,2vw,18px);color:var(--muted);max-width:62ch;line-height:1.55;margin:0}
-      .stats{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 4px}
-      .stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 16px;display:flex;align-items:baseline;gap:8px;box-shadow:0 3px 0 var(--line),0 14px 24px -14px rgba(16,20,30,.35)}
-      .stat b{font-size:20px;font-weight:800}
-      .stat span{font-size:12.5px;color:var(--muted);font-weight:600}
+      header.top{padding:78px 0 34px;text-align:center}
+      /* Medali emas berdasi kupu-kupu di tengah, seperti lambang pada undangan resmi */
+      .emblem{position:relative;margin:0 auto 34px;width:104px;height:104px;border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center}
+      .emblem::before{content:"";position:absolute;inset:6px;border:1px solid var(--accent);border-radius:50%;opacity:.45}
+      .emblem::after{content:"";position:absolute;left:50%;bottom:-26px;width:6px;height:6px;background:var(--accent);transform:translateX(-50%) rotate(45deg)}
+      .bowtie{display:flex;align-items:center}
+      .bowtie .w{width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent}
+      .bowtie .l{border-left:20px solid var(--accent)}
+      .bowtie .r{border-right:20px solid var(--accent)}
+      .bowtie .k{width:10px;height:10px;background:var(--accent);transform:rotate(45deg);margin:0 -3px;position:relative;z-index:1}
+      .kicker{display:flex;align-items:center;justify-content:center;gap:16px;font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--accent);font-weight:700}
+      .kicker::before,.kicker::after{content:"";width:52px;height:1px;background:var(--accent);opacity:.65;flex:none}
+      h1.title{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(48px,7.5vw,82px);line-height:1.02;font-weight:600;letter-spacing:.005em;margin:22px auto 18px;max-width:15ch}
+      h1.title em{font-style:italic;font-weight:500;color:var(--accent)}
+      .lede{font-size:clamp(15px,2vw,17px);color:var(--muted);max-width:58ch;line-height:1.75;margin:0 auto}
+      /* Pembatas ornamen: garis rambut — berlian emas — garis rambut */
+      .rule-orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:34px auto 0;max-width:440px}
+      .rule-orn::before,.rule-orn::after{content:"";flex:1;height:1px;background:var(--line)}
+      .rule-orn span{width:7px;height:7px;background:var(--accent);transform:rotate(45deg);flex:none}
+      /* Statistik sebagai plakat: tanpa kotak, hanya garis rambut atas-bawah */
+      .stats{display:flex;flex-wrap:wrap;justify-content:center;margin:28px auto 0;max-width:920px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+      .stat{padding:20px 38px;display:flex;align-items:baseline;gap:10px}
+      .stat + .stat{border-left:1px solid var(--line)}
+      .stat b{font-family:"Cormorant Garamond",Georgia,serif;font-size:32px;font-weight:600;line-height:1}
+      .stat span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+      @media (max-width:560px){ .stat{padding:16px 20px} .stat + .stat{border-left:0} }
       /* ---------- toolbar ---------- */
-      .toolbar{position:sticky;top:0;z-index:40;background:var(--bg);padding:16px 0 12px;border-bottom:1px solid var(--line);box-shadow:0 14px 26px -20px rgba(16,20,30,.45)}
+      .toolbar{position:sticky;top:0;z-index:40;background:var(--bg);padding:16px 0 12px;border-bottom:1px solid var(--line);box-shadow:0 16px 28px -24px rgba(20,20,22,.5)}
       .searchrow{display:flex;gap:10px;flex-wrap:wrap}
-      .search{flex:1 1 260px;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:0 18px}
+      .search{flex:1 1 260px;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:0 16px}
       .search svg{flex:none;color:var(--muted)}
       .search input{border:0;background:transparent;color:var(--ink);font:inherit;font-size:15px;padding:12px 0;width:100%;outline:none}
-      .btn{font:inherit;font-weight:700;font-size:14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 20px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 3px 0 var(--line),0 8px 16px -8px rgba(16,20,30,.3);transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease, color .12s ease}
+      .search:focus-within{border-color:var(--accent)}
+      .btn{font:inherit;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:13px 24px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 1px 2px rgba(23,20,16,.06);transition:background .25s ease, border-color .25s ease, color .25s ease}
       .btn:hover{border-color:var(--accent);color:var(--accent)}
-      .btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
-      .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);box-shadow:0 3px 0 color-mix(in srgb, var(--accent) 55%, #000),0 10px 18px -8px rgba(16,20,30,.4)}
-      .btn.primary:hover{filter:brightness(1.08);color:var(--accent-ink)}
-      .btn.primary:active{box-shadow:0 1px 0 color-mix(in srgb, var(--accent) 55%, #000)}
+      .btn:active{transform:translateY(1px)}
+      .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+      .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
       .chips{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 2px;scrollbar-width:none}
       .chips::-webkit-scrollbar{display:none}
-      .chip{flex:none;font:inherit;font-size:13.5px;font-weight:600;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:999px;padding:8px 15px;cursor:pointer;white-space:nowrap;box-shadow:0 2px 0 var(--line)}
-      .chip:active{transform:translateY(1px);box-shadow:0 1px 0 var(--line)}
-      .chip small{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);margin-left:5px}
+      .chip{flex:none;font:inherit;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:2px;padding:10px 17px;cursor:pointer;white-space:nowrap;transition:border-color .25s ease, background .25s ease, color .25s ease}
+      .chip:hover{border-color:var(--accent)}
+      .chip:active{transform:translateY(1px)}
+      .chip small{font-size:11px;color:var(--muted);margin-left:6px;letter-spacing:0}
       .chip.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-      .chip.active small{color:var(--bg);opacity:.7}
+      .chip.active small{color:var(--bg);opacity:.65}
       /* ---------- sections & cards ---------- */
-      section.cat{padding:34px 0 6px}
-      .cathead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
-      .cathead h2{font-size:clamp(22px,3.4vw,30px);font-weight:800;letter-spacing:-.01em;margin:0}
-      .cathead .count{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);font-weight:700}
-      .cathead p{width:100%;margin:2px 0 0;color:var(--muted);font-size:14.5px;line-height:1.5;max-width:70ch}
-      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px;margin-top:18px}
-      .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,20,30,.06),0 16px 30px -16px rgba(16,20,30,.3);transition:transform .25s ease, box-shadow .25s ease;will-change:transform}
-      .card:hover{box-shadow:var(--shadow)}
-      @media (prefers-reduced-motion: reduce){ .card{transition:none} }
+      section.cat{padding:58px 0 6px}
+      .cathead{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:8px}
+      .cathead .rn{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:16px;letter-spacing:.42em;text-indent:.42em;color:var(--accent);font-weight:600}
+      .cathead h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(30px,4.2vw,40px);font-weight:600;margin:8px 0 0;line-height:1.1}
+      .cathead .count{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:10px}
+      .cathead p{margin:10px 0 0;color:var(--muted);font-size:14.5px;line-height:1.65;max-width:56ch}
+      .rule-orn.mini{max-width:230px;margin-top:22px}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:28px;margin-top:30px}
+      .card{background:var(--surface);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(23,20,16,.05),0 16px 28px -20px rgba(23,20,16,.28);transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease}
+      .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:var(--shadow)}
+      @media (prefers-reduced-motion: reduce){ .card{transition:none} .card:hover{transform:none} }
       /* Pratinjau sebagian: hanya potongan atas template yang terlihat.
          Pratinjau penuh dibuka saat kartu/tombol ditekan (modal). */
-      .thumb{position:relative;height:148px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);cursor:pointer}
+      .thumb{position:relative;height:150px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);cursor:pointer}
       .thumb iframe{position:absolute;top:0;left:0;width:1280px;height:960px;border:0;transform-origin:0 0;pointer-events:none;background:#fff}
       .thumb::after{content:"";position:absolute;left:0;right:0;bottom:0;height:74px;background:linear-gradient(to bottom, rgba(255,255,255,0), var(--surface) 92%);pointer-events:none;z-index:1}
-      .thumb .open{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:2;background:var(--ink);color:var(--bg);font-size:12px;font-weight:700;border-radius:999px;padding:7px 14px;white-space:nowrap;box-shadow:0 5px 12px rgba(0,0,0,.3)}
-      .cardbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
-      .cardbody h3{margin:0;font-size:18px;font-weight:800}
-      .cardbody p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.55;flex:1}
+      .thumb .open{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:2;background:var(--surface);color:var(--ink);border:1px solid var(--accent);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border-radius:0;padding:8px 15px;white-space:nowrap;box-shadow:0 5px 12px rgba(0,0,0,.22)}
+      .cardbody{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+      .cardbody .no{font-size:10.5px;font-weight:700;letter-spacing:.3em;color:var(--accent)}
+      .cardbody h3{font-family:"Cormorant Garamond",Georgia,serif;margin:0;font-size:24px;font-weight:600;line-height:1.15}
+      .cardbody p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6;flex:1}
       .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
       .dots{display:flex;gap:5px}
-      .dot{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.18)}
-      .tag{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 9px}
-      .actions{display:flex;gap:8px;margin-top:6px}
-      .actions .btn{padding:9px 14px;font-size:13px}
+      .dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.18)}
+      .tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:0;padding:4px 9px}
+      .actions{display:flex;gap:8px;margin-top:8px}
+      .actions .btn{padding:10px 14px;font-size:11.5px}
       .actions .grow{flex:1;justify-content:center}
       .empty{display:none;text-align:center;padding:60px 20px;color:var(--muted)}
-      .empty b{display:block;font-size:20px;color:var(--ink);margin-bottom:6px}
+      .empty b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;color:var(--ink);margin-bottom:6px}
       /* ---------- custom paste ---------- */
-      .custom{margin:44px 0 10px;background:var(--surface);border:1px dashed var(--accent);border-radius:16px;padding:22px}
-      .custom h2{margin:0 0 6px;font-size:22px;font-weight:800}
-      .custom p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.55;max-width:70ch}
-      .custom textarea{width:100%;min-height:130px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font-family:"JetBrains Mono",monospace;font-size:12.5px;padding:14px;resize:vertical;outline:none}
+      .custom{margin:56px 0 10px;background:var(--surface);border:1px solid var(--line);border-top:3px double var(--accent);border-radius:2px;padding:28px}
+      .custom h2{font-family:"Cormorant Garamond",Georgia,serif;margin:0 0 6px;font-size:24px;font-weight:700}
+      .custom p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.6;max-width:70ch}
+      .custom textarea{width:100%;min-height:130px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font-family:"JetBrains Mono",monospace;font-size:12.5px;padding:14px;resize:vertical;outline:none;box-sizing:border-box}
       .custom textarea:focus{border-color:var(--accent)}
       .custom .row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-      footer.site{padding:36px 0 46px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:44px;line-height:1.6}
+      footer.site{padding:16px 0 56px;color:var(--muted);font-size:13px;border-top:3px double var(--line);margin-top:56px;line-height:1.8;text-align:center}
+      footer.site p{max-width:64ch;margin:0 auto}
+      footer.site .rule-orn{margin:26px auto 22px}
       /* ---------- modal ---------- */
-      .modal{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;background:rgba(12,10,8,.72);backdrop-filter:blur(4px)}
+      .modal{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;background:rgba(8,8,9,.78);backdrop-filter:blur(4px)}
       .modal.show{display:flex}
-      .modalbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;background:var(--surface);border-bottom:1px solid var(--line)}
-      .modalbar .name{font-weight:800;font-size:16px;margin-right:auto}
-      .modalbar .name span{display:block;font-weight:600;font-size:12px;color:var(--muted)}
-      .seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-      .seg button{font:inherit;font-size:13px;font-weight:700;border:0;background:var(--surface);color:var(--muted);padding:9px 14px;cursor:pointer}
+      .modalbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;background:var(--surface);border-bottom:1px solid var(--line);border-top:3px solid var(--accent)}
+      .modalbar .name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:18px;margin-right:auto}
+      .modalbar .name span{display:block;font-family:"Archivo",sans-serif;font-weight:600;font-size:12px;color:var(--muted)}
+      .modalbar .btn{padding:9px 14px;font-size:11.5px}
+      .seg{display:flex;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+      .seg button{font:inherit;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:0;background:var(--surface);color:var(--muted);padding:9px 14px;cursor:pointer}
       .seg button.active{background:var(--ink);color:var(--bg)}
       .stage{flex:1;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:18px}
-      .framewrap{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.5);transition:width .25s ease;height:100%;max-height:100%}
+      .framewrap{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.55);transition:width .25s ease;height:100%;max-height:100%}
       .framewrap iframe{width:100%;height:100%;border:0;display:block;background:#fff}
       /* ---------- code modal ---------- */
       .codebox{flex:1;overflow:auto;padding:18px}
-      .codebox pre{margin:0 auto;max-width:900px;background:#14110e;color:#f3e9d7;border-radius:12px;padding:20px;font-family:"JetBrains Mono",monospace;font-size:12px;line-height:1.6;overflow:auto;white-space:pre-wrap;word-break:break-word}
-      @media (prefers-color-scheme: light){ .codebox pre{background:#221d16} }
+      .codebox pre{margin:0 auto;max-width:900px;background:#101012;color:#ece4cf;border:1px solid #26262b;border-radius:6px;padding:20px;font-family:"JetBrains Mono",monospace;font-size:12px;line-height:1.6;overflow:auto;white-space:pre-wrap;word-break:break-word}
       /* ---------- toast ---------- */
-      .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:all .25s ease;z-index:200;box-shadow:var(--shadow)}
+      .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);font-weight:700;font-size:13.5px;padding:12px 22px;border-radius:3px;opacity:0;pointer-events:none;transition:all .25s ease;z-index:200;box-shadow:var(--shadow)}
       .toast.show{opacity:1;transform:translate(-50%,0)}
       @media (max-width:560px){
         .grid{grid-template-columns:1fr}
-        header.top{padding-top:30px}
+        header.top{padding-top:52px}
         .modalbar .name{width:100%;margin-right:0}
       }
     </style>
@@ -139,13 +147,13 @@
   <body>
     <div class="wrap">
       <header class="top">
-        <div class="scene3d" aria-hidden="true">
-          <div class="cube big"><i class="f"></i><i class="t"></i><i class="r"></i></div>
-          <div class="cube small"><i class="f"></i><i class="t"></i><i class="r"></i></div>
+        <div class="emblem" aria-hidden="true">
+          <div class="bowtie"><span class="w l"></span><span class="k"></span><span class="w r"></span></div>
         </div>
         <div class="kicker">Koleksi Desain Bebas Pakai</div>
-        <h1 class="title">Galeri Template Website</h1>
+        <h1 class="title">Galeri <em>Template</em> Website</h1>
         <p class="lede">Ruang simpan desain website dari berbagai jenis — toko online, portofolio, restoran, properti, sampai landing page. Setiap kartu menampilkan cuplikan tampilannya; tekan kartunya untuk membuka pratinjau lengkap, menyalin kode, atau mengunduhnya sebagai file HTML utuh yang siap dipakai.</p>
+        <div class="rule-orn" aria-hidden="true"><span></span></div>
         <div class="stats">
           <div class="stat"><b id="statTpl">0</b><span>template</span></div>
           <div class="stat"><b id="statCat">0</b><span>kategori</span></div>
@@ -186,7 +194,8 @@
       </section>
 
       <footer class="site">
-        Semua template di galeri ini adalah satu file HTML mandiri (CSS menempel di dalam file) — tanpa gambar eksternal, tanpa dependensi, tinggal salin dan sesuaikan teks, warna, dan isinya dengan kebutuhanmu.
+        <div class="rule-orn" aria-hidden="true"><span></span></div>
+        <p>Semua template di galeri ini adalah satu file HTML mandiri (CSS menempel di dalam file) — tanpa gambar eksternal, tanpa dependensi, tinggal salin dan sesuaikan teks, warna, dan isinya dengan kebutuhanmu.</p>
       </footer>
     </div>
 
@@ -401,21 +410,23 @@
       if (f) f.style.transform = "scale(" + (wrap.clientWidth / 1280) + ")";
     }
 
+    var RN = ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"];
+
     function render(){
       renderChips();
       var anyVisible = false;
       var html = "";
-      CATS.forEach(function(c){
+      CATS.forEach(function(c, ci){
         var list = TEMPLATES.filter(function(t){ return t.cat===c.id && matches(t); });
         if (!list.length) return;
         anyVisible = true;
-        html += "<section class='cat'><div class='cathead'><h2>" + esc(c.name) + "</h2><span class='count'>" + list.length + " template</span><p>" + esc(c.desc) + "</p></div><div class='grid'>";
-        list.forEach(function(t){
+        html += "<section class='cat'><div class='cathead'><span class='rn'>" + RN[ci] + "</span><h2>" + esc(c.name) + "</h2><span class='count'>" + list.length + " template</span><p>" + esc(c.desc) + "</p><div class='rule-orn mini' aria-hidden='true'><span></span></div></div><div class='grid'>";
+        list.forEach(function(t, ti){
           var dots = t.p.map(function(col){ return "<span class='dot' style='background:" + col + "'></span>"; }).join("");
           var tags = t.tags.map(function(x){ return "<span class='tag'>" + esc(x) + "</span>"; }).join("");
           html += "<article class='card' data-id='" + t.id + "'>"
             + "<div class='thumb' data-open='" + t.id + "' title='Klik untuk melihat pratinjau lengkap'><iframe title='Pratinjau " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe><span class='open'>Tekan untuk lihat semuanya ⤢</span></div>"
-            + "<div class='cardbody'><h3>" + esc(t.n) + "</h3><p>" + esc(t.d) + "</p>"
+            + "<div class='cardbody'><span class='no'>Nº " + ("0" + (ti + 1)).slice(-2) + "</span><h3>" + esc(t.n) + "</h3><p>" + esc(t.d) + "</p>"
             + "<div class='meta'><span class='dots'>" + dots + "</span>" + tags + "</div>"
             + "<div class='actions'><button type='button' class='btn primary grow' data-open='" + t.id + "'>Lihat Semua</button>"
             + "<button type='button' class='btn' data-copy='" + t.id + "'>Salin Kode</button>"
@@ -443,18 +454,6 @@
         el.addEventListener("click", function(){ downloadCode(byId(el.getAttribute("data-dl"))); });
       });
 
-      /* Efek kemiringan 3D mengikuti kursor (hanya pointer halus & tanpa reduced-motion) */
-      if (window.matchMedia("(pointer:fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-        main.querySelectorAll(".card").forEach(function(card){
-          card.addEventListener("mousemove", function(e){
-            var r = card.getBoundingClientRect();
-            var x = (e.clientX - r.left) / r.width - 0.5;
-            var y = (e.clientY - r.top) / r.height - 0.5;
-            card.style.transform = "perspective(950px) rotateX(" + (-y * 6).toFixed(2) + "deg) rotateY(" + (x * 8).toFixed(2) + "deg) translateY(-3px)";
-          });
-          card.addEventListener("mouseleave", function(){ card.style.transform = ""; });
-        });
-      }
     }
 
     function byId(id){ for (var i=0;i<TEMPLATES.length;i++) if (TEMPLATES[i].id===id) return TEMPLATES[i]; return null; }

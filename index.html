@@ -4,7 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
+    <meta name="description" content="Galeri template website gratis yang elegan — 24 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta property="og:title" content="Galeri Template Website — 24 Desain Gratis &amp; Elegan" />
+    <meta property="og:description" content="Galeri template website gratis yang elegan — 24 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://muse.ai/s/galeri-template-website-xjxf6udxaxpa6xvd" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Galeri Template Website — 24 Desain Gratis &amp; Elegan" />
+    <meta name="twitter:description" content="Galeri template website gratis yang elegan — 24 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111111'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%23c9a24b' stroke-width='5'/%3E%3Cpath d='M32 20 L44 32 L32 44 L20 32 Z' fill='%23c9a24b'/%3E%3C/svg%3E" />
     <title>Galeri Template Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,6 +77,12 @@
       .btn:active{transform:translateY(1px)}
       .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
       .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+      /* Kontrol urutan: gaya selaras bilah alat — sudut siku, label kapital berjarak, aksen emas */
+      .sortbox{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:0 8px 0 16px}
+      .sortbox:focus-within{border-color:var(--accent)}
+      .sortbox .lbl{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+      .sortbox select{font:inherit;font-size:13.5px;font-weight:600;color:var(--ink);background:transparent;border:0;outline:none;padding:12px 6px 12px 0;cursor:pointer;max-width:180px}
+      @media (max-width:560px){ .sortbox{flex:1 1 210px} .sortbox select{flex:1;max-width:none} }
       .chips{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 2px;scrollbar-width:none}
       .chips::-webkit-scrollbar{display:none}
       .chip{flex:none;font:inherit;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:2px;padding:10px 17px;cursor:pointer;white-space:nowrap;transition:border-color .25s ease, background .25s ease, color .25s ease}
@@ -180,6 +194,14 @@
           <label class="search">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
             <input id="q" type="search" placeholder="Cari template… misalnya “kopi”, “properti”, “dokter”" autocomplete="off" />
+          </label>
+          <label class="sortbox">
+            <span class="lbl">Urutkan</span>
+            <select id="sortSel" aria-label="Urutkan template">
+              <option value="kategori" selected>Per Kategori</option>
+              <option value="az">Nama A–Z</option>
+              <option value="za">Nama Z–A</option>
+            </select>
           </label>
           <button class="btn" id="btnCustom" type="button">+ Tempel Kode Sendiri</button>
         </div>
@@ -397,7 +419,7 @@
     var chipsBox = document.getElementById("chips");
     var qInput = document.getElementById("q");
     var emptyBox = document.getElementById("empty");
-    var state = { cat: "semua", q: "" };
+    var state = { cat: "semua", q: "", sort: "kategori" };
 
     document.getElementById("statTpl").textContent = TEMPLATES.length;
     document.getElementById("statCat").textContent = CATS.length;
@@ -434,24 +456,54 @@
 
     var RN = ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"];
 
+    /* Kartu teaser: cuplikan, nomor seri, nama, label kategori, satu tombol.
+       Nomor seri (no) adalah identitas template — tidak pernah dihitung ulang
+       hanya karena urutan tampilan berubah. */
+    function cardHtml(t, no){
+      return "<article class='card' data-id='" + t.id + "'>"
+        + "<div class='thumb' data-open='" + t.id + "' title='Tekan untuk melihat pratinjau lengkap'><iframe title='Cuplikan " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe><span class='open'>Tekan untuk lihat semua</span></div>"
+        + "<div class='cardbody'><span class='no'>Nº " + ("0" + no).slice(-2) + "</span><h3>" + esc(t.n) + "</h3><span class='catlbl'>" + esc(catName(t.cat)) + "</span>"
+        + "<div class='actions'><button type='button' class='btn primary grow' data-open='" + t.id + "'>Lihat Pratinjau</button></div>"
+        + "</div></article>";
+    }
+
     function render(){
       renderChips();
       var anyVisible = false;
       var html = "";
-      CATS.forEach(function(c, ci){
+      /* Saringan kategori + pencarian diterapkan lebih dulu. Nomor seri
+         dihitung per kategori dari daftar yang lolos saringan, sehingga Nº
+         yang sama melekat pada template di semua mode urutan. */
+      var byCat = {};
+      var serial = {};
+      CATS.forEach(function(c){
         var list = TEMPLATES.filter(function(t){ return t.cat===c.id && matches(t); });
-        if (!list.length) return;
-        anyVisible = true;
-        html += "<section class='cat'><div class='cathead'><span class='rn'>" + RN[ci] + "</span><h2>" + esc(c.name) + "</h2><span class='count'>" + list.length + " template</span><div class='rule-orn mini' aria-hidden='true'><span></span></div></div><div class='grid'>";
-        list.forEach(function(t, ti){
-          html += "<article class='card' data-id='" + t.id + "'>"
-            + "<div class='thumb' data-open='" + t.id + "' title='Tekan untuk melihat pratinjau lengkap'><iframe title='Cuplikan " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe><span class='open'>Tekan untuk lihat semua</span></div>"
-            + "<div class='cardbody'><span class='no'>Nº " + ("0" + (ti + 1)).slice(-2) + "</span><h3>" + esc(t.n) + "</h3><span class='catlbl'>" + esc(catName(t.cat)) + "</span>"
-            + "<div class='actions'><button type='button' class='btn primary grow' data-open='" + t.id + "'>Lihat Pratinjau</button></div>"
-            + "</div></article>";
-        });
-        html += "</div></section>";
+        byCat[c.id] = list;
+        list.forEach(function(t, ti){ serial[t.id] = ti + 1; });
       });
+      if (state.sort === "kategori"){
+        CATS.forEach(function(c, ci){
+          var list = byCat[c.id];
+          if (!list.length) return;
+          anyVisible = true;
+          html += "<section class='cat'><div class='cathead'><span class='rn'>" + RN[ci] + "</span><h2>" + esc(c.name) + "</h2><span class='count'>" + list.length + " template</span><div class='rule-orn mini' aria-hidden='true'><span></span></div></div><div class='grid'>";
+          list.forEach(function(t){ html += cardHtml(t, serial[t.id]); });
+          html += "</div></section>";
+        });
+      } else {
+        /* Mode nama: satu aliran grid terurut, tanpa kepala seksi kategori. */
+        var all = TEMPLATES.filter(matches);
+        all.sort(function(a, b){
+          var r = a.n.localeCompare(b.n, "id");
+          return state.sort === "za" ? -r : r;
+        });
+        if (all.length){
+          anyVisible = true;
+          html += "<section class='cat'><div class='grid'>";
+          all.forEach(function(t){ html += cardHtml(t, serial[t.id]); });
+          html += "</div></section>";
+        }
+      }
       main.innerHTML = html;
       emptyBox.style.display = anyVisible ? "none" : "block";
 
@@ -481,6 +533,12 @@
 
     qInput.addEventListener("input", function(){
       state.q = qInput.value.trim().toLowerCase();
+      render();
+    });
+
+    var sortSel = document.getElementById("sortSel");
+    sortSel.addEventListener("change", function(){
+      state.sort = sortSel.value;
       render();
     });
 

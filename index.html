@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="Galeri template website gratis yang elegan — 24 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
-    <meta property="og:title" content="Galeri Template Website — 24 Desain Gratis &amp; Elegan" />
-    <meta property="og:description" content="Galeri template website gratis yang elegan — 24 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta name="description" content="Galeri template website gratis yang elegan — 34 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta property="og:title" content="Galeri Template Website — 34 Desain Gratis &amp; Elegan" />
+    <meta property="og:description" content="Galeri template website gratis yang elegan — 34 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://muse.ai/s/galeri-template-website-xjxf6udxaxpa6xvd" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Galeri Template Website — 24 Desain Gratis &amp; Elegan" />
-    <meta name="twitter:description" content="Galeri template website gratis yang elegan — 24 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta name="twitter:title" content="Galeri Template Website — 34 Desain Gratis &amp; Elegan" />
+    <meta name="twitter:description" content="Galeri template website gratis yang elegan — 34 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111111'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%23c9a24b' stroke-width='5'/%3E%3Cpath d='M32 20 L44 32 L32 44 L20 32 Z' fill='%23c9a24b'/%3E%3C/svg%3E" />
     <title>Galeri Template Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -134,6 +134,64 @@
       footer.site{padding:16px 0 56px;color:var(--muted);font-size:13px;border-top:3px double var(--line);margin-top:56px;line-height:1.8;text-align:center}
       footer.site p{max-width:64ch;margin:0 auto}
       footer.site .rule-orn{margin:26px auto 22px}
+      footer.site .statement{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(19px,2.6vw,23px);color:var(--ink);max-width:52ch;margin:0 auto 12px;line-height:1.5}
+      /* ---------- saring warna ---------- */
+      .colorrow{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:none}
+      .colorrow::-webkit-scrollbar{display:none}
+      .colorrow .clbl{flex:none;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-right:2px}
+      .swbtn{flex:none;display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:2px;padding:7px 12px 7px 8px;cursor:pointer;transition:border-color .25s ease, box-shadow .25s ease}
+      .swbtn:hover{border-color:var(--accent)}
+      .swbtn .sw{width:15px;height:15px;border-radius:50%;border:1px solid rgba(0,0,0,.22);flex:none}
+      .swbtn.active{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+      .swbtn small{font-size:10.5px;color:var(--muted);letter-spacing:0}
+      /* ---------- plakat kurasi & penanda simpan pada kartu ---------- */
+      .norow{display:flex;align-items:center;justify-content:space-between;gap:8px}
+      .plaque{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:3px 8px;white-space:nowrap}
+      .savedmark{position:absolute;top:0;right:12px;z-index:2;color:var(--accent);filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+      /* ---------- panel spesifikasi di dalam modal ---------- */
+      .pvinfo{max-height:46vh;overflow-y:auto}
+      .spec{border-collapse:collapse;width:100%;margin-top:12px}
+      .spec tr{border-top:1px solid var(--line)}
+      .spec th{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);text-align:left;vertical-align:top;padding:9px 14px 9px 0;width:118px;white-space:nowrap}
+      .spec td{font-size:13px;color:var(--ink);padding:9px 0;line-height:1.55}
+      .spec td .pal{margin-right:0}
+      .subhead{font-family:"Cormorant Garamond",Georgia,serif;font-size:16.5px;font-weight:700;letter-spacing:.05em;margin-top:16px;color:var(--ink)}
+      .paket{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:6px 18px}
+      .paket li{font-size:13px;color:var(--muted);padding-left:24px;position:relative;line-height:1.5}
+      .paket li::before{content:"✓";position:absolute;left:2px;color:var(--accent);font-weight:700}
+      .relrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+      .relbtn{font:inherit;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:2px;padding:9px 14px;cursor:pointer;transition:border-color .25s ease}
+      .relbtn b{font-family:"Cormorant Garamond",Georgia,serif;font-size:16px;font-weight:600;display:block;color:var(--ink);line-height:1.2}
+      .relbtn span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+      .relbtn:hover{border-color:var(--accent)}
+      .btn.saved{border-color:var(--accent);color:var(--accent)}
+      .btn.saved .bm path{fill:var(--accent)}
+      @media (max-width:560px){ .spec th{width:92px;white-space:normal} }
+      /* ---------- bandingkan sekilas ---------- */
+      .banding{margin-top:64px}
+      .banding .bhead{text-align:center}
+      .banding h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(28px,4vw,38px);font-weight:600;margin:10px 0 0;line-height:1.1}
+      .banding .bsub{color:var(--muted);font-size:14px;margin:8px auto 0;max-width:56ch;line-height:1.65}
+      .ctable{width:100%;border-collapse:collapse;margin-top:24px;font-size:13.5px;background:var(--surface);border:1px solid var(--line)}
+      .ctable th{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);text-align:left;padding:13px 16px;border-bottom:3px double var(--line);font-weight:700}
+      .ctable td{padding:11px 16px;border-bottom:1px solid var(--line);vertical-align:middle;color:var(--muted)}
+      .ctable tr:last-child td{border-bottom:0}
+      .ctable .tname{font-family:"Cormorant Garamond",Georgia,serif;font-size:17.5px;font-weight:600;background:none;border:0;color:var(--ink);cursor:pointer;padding:0;text-align:left}
+      .ctable .tname:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+      .ctable .mini{display:inline-flex;gap:4px}
+      .ctable .mini .dot{width:12px;height:12px}
+      @media (max-width:640px){ .ctable .colx{display:none} }
+      /* ---------- kepercayaan & tanya jawab ---------- */
+      .percaya{margin-top:64px;text-align:center}
+      .percaya .stmt{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(21px,3vw,27px);line-height:1.45;max-width:46ch;margin:18px auto 0;color:var(--ink)}
+      .faq{max-width:760px;margin:34px auto 0;text-align:left}
+      .faq-item{border-bottom:1px solid var(--line)}
+      .faq-item:first-child{border-top:1px solid var(--line)}
+      .faq-q{width:100%;font:inherit;display:flex;justify-content:space-between;align-items:center;gap:14px;background:none;border:0;color:var(--ink);cursor:pointer;padding:17px 4px;text-align:left}
+      .faq-q b{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;font-weight:600;line-height:1.25}
+      .faq-q .pm{flex:none;width:22px;height:22px;border:1px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1}
+      .faq-a{display:none;padding:0 4px 18px;color:var(--muted);font-size:14px;line-height:1.7;max-width:68ch}
+      .faq-item.open .faq-a{display:block}
       /* ---------- modal ---------- */
       .modal{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;background:rgba(8,8,9,.78);backdrop-filter:blur(4px)}
       .modal.show{display:flex}
@@ -206,6 +264,7 @@
           <button class="btn" id="btnCustom" type="button">+ Tempel Kode Sendiri</button>
         </div>
         <div class="chips" id="chips"></div>
+        <div class="colorrow" id="colorRow"></div>
       </div>
     </div>
 
@@ -213,9 +272,50 @@
 
     <div class="wrap">
       <div class="empty" id="empty">
-        <b>Tidak ada template yang cocok</b>
-        Coba kata kunci lain, atau pilih kategori “Semua”.
+        <b id="emptyTitle">Tidak ada template yang cocok</b>
+        <span id="emptyText">Coba kata kunci lain, atau pilih kategori “Semua”.</span>
       </div>
+
+      <section class="banding">
+        <div class="bhead">
+          <div class="rule-orn" aria-hidden="true"><span></span></div>
+          <h2>Bandingkan Sekilas</h2>
+          <p class="bsub">Seluruh koleksi dalam satu pandangan — tekan nama template untuk membuka pratinjaunya.</p>
+        </div>
+        <table class="ctable">
+          <thead>
+            <tr><th scope="col">Nama</th><th scope="col">Kategori</th><th scope="col">Palet</th><th scope="col" class="colx">Teknologi</th><th scope="col" class="colx">Lisensi</th></tr>
+          </thead>
+          <tbody id="cmpBody"></tbody>
+        </table>
+      </section>
+
+      <section class="percaya">
+        <div class="rule-orn" aria-hidden="true"><span></span></div>
+        <p class="stmt">Setiap template dipratinjau langsung, berkasnya utuh, dan lisensinya jelas — gratis tanpa daftar, tanpa syarat tersembunyi.</p>
+        <div class="faq" id="faq">
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false"><b>Apakah template di galeri ini benar-benar gratis?</b><span class="pm" aria-hidden="true">+</span></button>
+            <div class="faq-a">Ya, sepenuhnya. Seluruh 34 template boleh diunduh, disalin, dan dipakai tanpa biaya, tanpa membuat akun, dan tanpa batas waktu pemakaian.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false"><b>Bolehkah dipakai untuk proyek klien atau keperluan komersial?</b><span class="pm" aria-hidden="true">+</span></button>
+            <div class="faq-a">Boleh. Lisensi setiap template mengizinkan pemakaian pribadi maupun komersial, termasuk untuk website klien dan usaha kamu sendiri.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false"><b>Apakah saya perlu mencantumkan atribusi atau kredit?</b><span class="pm" aria-hidden="true">+</span></button>
+            <div class="faq-a">Tidak wajib. Kamu bebas memakai template tanpa mencantumkan kredit apa pun. Mencantumkannya tentu dihargai, tetapi bukan syarat.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false"><b>Bagaimana cara memakai template setelah diunduh?</b><span class="pm" aria-hidden="true">+</span></button>
+            <div class="faq-a">Unduh berkas .html-nya, buka dengan penyunting teks untuk mengganti teks, warna, dan isinya, lalu unggah berkas itu ke layanan hosting apa pun. Satu berkas tersebut sudah menjadi website yang utuh — tidak ada berkas pendamping yang perlu dicari.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false"><b>Bolehkah saya mengubah desainnya?</b><span class="pm" aria-hidden="true">+</span></button>
+            <div class="faq-a">Boleh, sepenuhnya. Sesuaikan warna, huruf, susunan bagian, dan seluruh isinya dengan kebutuhanmu — tidak ada batasan perubahan.</div>
+          </div>
+        </div>
+      </section>
 
       <section class="custom" id="customBox" hidden>
         <h2>Tempel Kode Sendiri</h2>
@@ -229,6 +329,7 @@
 
       <footer class="site">
         <div class="rule-orn" aria-hidden="true"><span></span></div>
+        <p class="statement">Koleksi ini disusun dengan satu keyakinan: desain yang anggun layak dimiliki siapa saja.</p>
         <p>Semua template di galeri ini adalah satu file HTML mandiri (CSS menempel di dalam file) — tanpa gambar eksternal, tanpa dependensi, tinggal salin dan sesuaikan teks, warna, dan isinya dengan kebutuhanmu.</p>
       </footer>
     </div>
@@ -245,17 +346,22 @@
         <button class="btn" id="pvCode" type="button">Lihat Kode</button>
         <button class="btn" id="pvCopy" type="button">Salin Kode</button>
         <button class="btn" id="pvDl" type="button">Unduh</button>
+        <button class="btn" id="pvSave" type="button" aria-pressed="false"><svg class="bm" width="12" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M2 1.2h8V14L6 10.8 2 14z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><span id="pvSaveLbl">Simpan</span></button>
         <button class="btn primary" id="pvClose" type="button">Tutup ✕</button>
       </div>
       <div class="pvinfo" id="pvInfo">
         <div class="pvinfo-title">Pratinjau &amp; Kode</div>
         <p id="pvDesc"></p>
-        <div class="row2">
-          <span class="lbl">Palet Warna</span>
-          <span class="pal" id="pvPal"></span>
-          <span class="lbl">Jenis</span>
-          <span class="tagset" id="pvTags"></span>
-        </div>
+        <table class="spec" id="pvSpec"></table>
+        <div class="subhead">Isi Paket</div>
+        <ul class="paket">
+          <li>Berkas HTML mandiri — satu file utuh</li>
+          <li>CSS &amp; JavaScript tertanam di dalam berkas</li>
+          <li>Responsif — Desktop, Tablet, dan HP</li>
+          <li>Siap disalin &amp; diunduh kapan saja</li>
+        </ul>
+        <div class="subhead">Template Terkait</div>
+        <div class="relrow" id="pvRel"></div>
       </div>
       <div class="stage">
         <div class="framewrap" id="pvWrap" style="width:100%">
@@ -409,8 +515,112 @@
 
     { id:"ebook-produk", cat:"landing", n:"Ebook & Produk Digital", d:"Halaman penjualan ebook/produk digital: janji manfaat, isi bab, testimoni, dan kotak harga dengan garansi.", p:["#fdf6ec","#b45309","#292018"], tags:["Ebook","Penjualan"],
       s:"*{margin:0;box-sizing:border-box}body{font-family:Georgia,serif;background:#fdf6ec;color:#292018}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%}.logo{font-family:Arial,sans-serif;font-weight:900;font-size:19px}.logo span{color:#b45309}nav ul{display:flex;gap:22px;list-style:none;font-family:Arial,sans-serif;font-size:13.5px}.hero{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;padding:46px 6% 40px;align-items:center}.book{background:linear-gradient(150deg,#b45309,#7c3a06);color:#fdf6ec;border-radius:6px 16px 16px 6px;padding:34px 28px;aspect-ratio:3/4;display:flex;flex-direction:column;box-shadow:18px 24px 44px rgba(124,58,6,.3);max-width:320px}.book .kick{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.2em}.book h3{font-size:32px;line-height:1.15;margin:14px 0;font-weight:normal}.book p{font-family:Arial,sans-serif;font-size:13px;line-height:1.6;color:#f3ddba}.book .au{margin-top:auto;font-family:Arial,sans-serif;font-size:13px;font-weight:bold}.hero h1{font-size:clamp(30px,4.6vw,46px);line-height:1.16;font-weight:normal}.hero h1 em{color:#b45309}.hero>p,.lead{font-family:Arial,sans-serif;color:#6b5d4a;line-height:1.75;font-size:15px;margin:16px 0}.hero li{font-family:Arial,sans-serif;list-style:none;font-size:14.5px;padding:7px 0}.hero li::before{content:'✓ ';color:#b45309;font-weight:bold}.price{background:#fff;border:1.5px solid #e8d9bd;border-radius:14px;padding:20px;margin-top:20px;font-family:Arial,sans-serif}.price .old{color:#b0a186;text-decoration:line-through;font-size:14px}.price .num{font-size:32px;font-weight:900}.price .num span{font-size:13px;font-weight:normal;color:#6b5d4a}.btn{display:block;text-align:center;background:#b45309;color:#fff;font-weight:bold;padding:14px;border-radius:10px;margin-top:13px;font-size:15px}.price small{display:block;text-align:center;color:#8a7c64;margin-top:9px;font-size:12px}section{padding:26px 6% 50px}.wrap2{max-width:900px;margin:0 auto}h2{font-size:28px;font-weight:normal;text-align:center;margin-bottom:22px}.testi{display:grid;grid-template-columns:1fr 1fr;gap:18px}.tq{background:#fff;border:1px solid #e8d9bd;border-radius:14px;padding:22px}.tq p{font-style:italic;line-height:1.7;font-size:15px}.tq b{display:block;margin-top:12px;font-family:Arial,sans-serif;font-size:13.5px;font-style:normal}.tq span{font-family:Arial,sans-serif;font-size:12.5px;color:#8a7c64}footer{border-top:1px solid #e8d9bd;padding:24px 6%;font-family:Arial,sans-serif;font-size:13px;color:#8a7c64;text-align:center;line-height:1.8}@media(max-width:840px){.hero,.testi{grid-template-columns:1fr}.book{margin:0 auto}nav ul{display:none}}",
-      h:"<nav><div class='logo'>Pustaka<span>Praktis</span></div><ul><li>Isi Buku</li><li>Penulis</li><li>Testimoni</li><li>FAQ</li></ul></nav><div class='hero'><div class='book'><div class='kick'>EBOOK PRAKTIS · 212 HALAMAN</div><h3>Jualan Online Tanpa Iklan Mahal</h3><p>Panduan langkah demi langkah membangun penjualan dari konten organik — ditulis dari pengalaman 6 tahun mengelola 3 toko online.</p><div class='au'>oleh GILANG SAPUTRA</div></div><div><h1>Pelanggan datang dari <em>konten</em>, bukan dari bakar uang iklan.</h1><p class='lead'>Ebook ini membedah sistem yang dipakai 1.400+ penjual online Indonesia untuk mendapat pesanan harian tanpa bergantung pada iklan berbayar.</p><ul><li>12 bab + 9 template konten siap pakai</li><li>Studi kasus nyata dengan angka, bukan teori</li><li>Bonus: kalender konten 90 hari &amp; skrip chat penjual</li><li>Sekali bayar, termasuk semua pembaruan edisi</li></ul><div class='price'><div class='old'>Harga normal Rp 349.000</div><div class='num'>Rp 149.000 <span>· minggu ini saja</span></div><a class='btn' href='#'>Beli Sekarang — Akses Instan</a><small>Garansi 14 hari: tidak puas, uang kembali penuh.</small></div></div></div><section><div class='wrap2'><h2>Kata Pembaca</h2><div class='testi'><div class='tq'><p>“Bab tentang kalender konten mengubah cara saya jualan. Omzet naik dari 3 juta ke 11 juta per bulan dalam empat bulan.”</p><b>Rina Amelia</b><span>Pemilik toko hijab, Pekalongan</span></div><div class='tq'><p>“Bahasa sederhana, langsung praktik. Template skrip chat-nya saja sudah sepadan dengan harga bukunya.”</p><b>Andika Pratama</b><span>Penjual aksesoris HP, Makassar</span></div></div></div></section><footer>Pustaka Praktis · Pembayaran aman via transfer bank, e-wallet, dan QRIS<br/>© 2026 Gilang Saputra</footer>" }
+      h:"<nav><div class='logo'>Pustaka<span>Praktis</span></div><ul><li>Isi Buku</li><li>Penulis</li><li>Testimoni</li><li>FAQ</li></ul></nav><div class='hero'><div class='book'><div class='kick'>EBOOK PRAKTIS · 212 HALAMAN</div><h3>Jualan Online Tanpa Iklan Mahal</h3><p>Panduan langkah demi langkah membangun penjualan dari konten organik — ditulis dari pengalaman 6 tahun mengelola 3 toko online.</p><div class='au'>oleh GILANG SAPUTRA</div></div><div><h1>Pelanggan datang dari <em>konten</em>, bukan dari bakar uang iklan.</h1><p class='lead'>Ebook ini membedah sistem yang dipakai 1.400+ penjual online Indonesia untuk mendapat pesanan harian tanpa bergantung pada iklan berbayar.</p><ul><li>12 bab + 9 template konten siap pakai</li><li>Studi kasus nyata dengan angka, bukan teori</li><li>Bonus: kalender konten 90 hari &amp; skrip chat penjual</li><li>Sekali bayar, termasuk semua pembaruan edisi</li></ul><div class='price'><div class='old'>Harga normal Rp 349.000</div><div class='num'>Rp 149.000 <span>· minggu ini saja</span></div><a class='btn' href='#'>Beli Sekarang — Akses Instan</a><small>Garansi 14 hari: tidak puas, uang kembali penuh.</small></div></div></div><section><div class='wrap2'><h2>Kata Pembaca</h2><div class='testi'><div class='tq'><p>“Bab tentang kalender konten mengubah cara saya jualan. Omzet naik dari 3 juta ke 11 juta per bulan dalam empat bulan.”</p><b>Rina Amelia</b><span>Pemilik toko hijab, Pekalongan</span></div><div class='tq'><p>“Bahasa sederhana, langsung praktik. Template skrip chat-nya saja sudah sepadan dengan harga bukunya.”</p><b>Andika Pratama</b><span>Penjual aksesoris HP, Makassar</span></div></div></div></section><footer>Pustaka Praktis · Pembayaran aman via transfer bank, e-wallet, dan QRIS<br/>© 2026 Gilang Saputra</footer>" },
+
+    /* ================= TEMPLATE BARU — SATU WARNA, SATU GAYA, SATU TEMA ================= */
+    { id:"aurum", cat:"toko", n:"Aurum — Perhiasan & Butik Emas", d:"Toko perhiasan hitam–gading dengan satu aksen emas tunggal: etalase cincin, kalung, dan gelang berharga jelas, label kapital berjarak huruf, dan ruang kosong yang lapang.", p:["#231F20","#AD974F","#EAEAEA"], tags:["Perhiasan","Butik"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#EAEAEA;color:#231F20}a{text-decoration:none;color:inherit}.bar{background:#231F20;color:#D2AE76;text-align:center;font-size:11px;letter-spacing:.28em;padding:10px 6%;text-transform:uppercase}nav{display:flex;justify-content:space-between;align-items:center;padding:20px 6%;background:#EAEAEA;border-bottom:1px solid #cfc8b8}.logo{font-family:'Playfair Display',Georgia,serif;font-size:27px;letter-spacing:.34em;font-weight:600}.logo span{color:#AD974F}nav ul{display:flex;gap:28px;list-style:none;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#5c564a}.hero{background:#231F20;color:#EAEAEA;text-align:center;padding:74px 6% 66px}.hero .orn{color:#AD974F;letter-spacing:.6em;font-size:14px}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(36px,6vw,58px);font-weight:500;line-height:1.14;margin:18px auto 14px;max-width:20ch}.hero h1 em{color:#D2AE76}.hero p{color:#b6b0a2;line-height:1.75;max-width:54ch;margin:0 auto 28px;font-size:15px}.btn{display:inline-block;border:1px solid #AD974F;color:#D2AE76;padding:13px 30px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}section{padding:54px 6%}.lbl{text-align:center;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#AD974F;font-weight:700}h2{font-family:'Playfair Display',Georgia,serif;text-align:center;font-size:32px;font-weight:600;margin:10px 0 30px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1120px;margin:0 auto}.item{background:#f7f5ef;border:1px solid #ddd6c4;padding:14px}.item .ph{aspect-ratio:1/1.05;display:flex;align-items:flex-end;padding:12px;color:#fff;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}.g1{background:linear-gradient(155deg,#3a332a,#231F20)}.g2{background:linear-gradient(155deg,#57492c,#2c2517)}.g3{background:linear-gradient(155deg,#2c2517,#17130c)}.g4{background:linear-gradient(155deg,#463a22,#231F20)}.item h3{font-family:'Playfair Display',Georgia,serif;font-size:17.5px;font-weight:600;margin:14px 0 4px}.item p{font-size:12.5px;color:#7a7362;line-height:1.6}.item .price{color:#AD974F;font-weight:700;font-size:16px;margin-top:9px;letter-spacing:.04em}.strip{background:#231F20;color:#EAEAEA;display:grid;grid-template-columns:repeat(3,1fr);gap:0;text-align:center}.strip div{padding:30px 20px;border-right:1px solid #3a352c}.strip div:last-child{border-right:0}.strip b{font-family:'Playfair Display',Georgia,serif;font-size:19px;font-weight:600;display:block;color:#D2AE76}.strip span{font-size:12px;color:#a49d8c;line-height:1.6;display:block;margin-top:5px}footer{background:#17140f;color:#8d8674;font-size:12.5px;text-align:center;padding:26px 6%;line-height:1.9;letter-spacing:.06em}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.strip{grid-template-columns:1fr}.strip div{border-right:0;border-bottom:1px solid #3a352c}nav ul{display:none}}",
+      h:"<div class='bar'>Koleksi Emas 18K &amp; 24K — Bersertifikat Resmi</div><nav><div class='logo'>AURUM<span>.</span></div><ul><li>Cincin</li><li>Kalung</li><li>Gelang</li><li>Hadiah</li></ul></nav><div class='hero'><div class='orn'>✦ ✦ ✦</div><h1>Emas yang dipakai <em>seumur hidup,</em> bukan semusim.</h1><p>Perhiasan emas tempaan pengrajin Yogyakarta dan Jepara — setiap keping disertai sertifikat kadar, timbangan terbuka, dan garansi tukar seumur hidup.</p><a class='btn' href='#'>Lihat Koleksi</a></div><section><div class='lbl'>Etalase Pilihan</div><h2>Koleksi Tanda Tangan</h2><div class='grid'><div class='item'><div class='ph g1'>Emas 18K</div><h3>Cincin Solitaire Arunika</h3><p>Batu zirconia 0,5 karat, rangka emas kuning 18K hasil tempa tangan.</p><div class='price'>Rp 8.950.000</div></div><div class='item'><div class='ph g2'>Emas 24K</div><h3>Kalung Rantai Naga</h3><p>Rantai emas murni 24K, 12 gram — investasi yang bisa dipakai.</p><div class='price'>Rp 16.400.000</div></div><div class='item'><div class='ph g3'>Emas 18K</div><h3>Gelang Serut Klasik</h3><p>Gelang serut dapat diatur, ukiran daun waru di sepanjang rangka.</p><div class='price'>Rp 6.275.000</div></div><div class='item'><div class='ph g4'>Set Hadiah</div><h3>Set Seserahan Puspa</h3><p>Cincin sepasang + kalung dalam kotak beludru — untuk lamaran.</p><div class='price'>Rp 21.900.000</div></div></div></section><div class='strip'><div><b>Timbang Terbuka</b><span>Berat dan kadar ditimbang di depan Anda, tanpa biaya tersembunyi.</span></div><div><b>Buyback Jelas</b><span>Harga beli kembali mengikuti harga emas hari itu, tertulis di nota.</span></div><div><b>Garansi Seumur Hidup</b><span>Bersih, poles, dan perbaikan kecil gratis selamanya.</span></div></div><footer>AURUM Perhiasan · Jl. Malioboro No. 112, Yogyakarta<br/>Buka setiap hari 09.00–21.00 WIB · © 2026 Aurum Jewelry</footer>" },
+
+    { id:"sasana-graha", cat:"landing", n:"Sasana Graha — Venue Pernikahan Premium", d:"Satu halaman venue pernikahan bernuansa gading dengan judul serif emas: kapasitas gedung, fasilitas, dan tabel daftar harga paket yang terang di muka.", p:["#FAF5EA","#AD974F","#231F20"], tags:["Venue","Pernikahan"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#FAF5EA;color:#231F20}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:20px 6%}.logo{font-family:'Playfair Display',Georgia,serif;font-size:23px;letter-spacing:.14em;font-weight:600}.logo span{color:#AD974F}nav ul{display:flex;gap:26px;list-style:none;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#6d6455}.book{border:1px solid #AD974F;color:#8a6d2f;padding:10px 20px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}.hero{text-align:center;padding:58px 6% 46px}.hero .orn{color:#AD974F;letter-spacing:.55em;font-size:15px}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,6.4vw,62px);font-weight:500;line-height:1.13;margin:18px auto 14px;max-width:19ch}.hero h1 em{color:#AD974F}.hero p{color:#6d6455;line-height:1.8;max-width:56ch;margin:0 auto 28px;font-size:15px}.btn{display:inline-block;background:#231F20;color:#FAF5EA;padding:14px 32px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:10px 6% 8px;max-width:1120px;margin:0 auto}.feat{border:1px solid #e0d5b8;background:#fffdf6;padding:22px;text-align:center}.feat b{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:600;display:block;color:#231F20}.feat span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8172}section{padding:48px 6%}.wrap2{max-width:880px;margin:0 auto}.lbl{text-align:center;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#AD974F;font-weight:700}h2{font-family:'Playfair Display',Georgia,serif;text-align:center;font-size:31px;font-weight:600;margin:10px 0 8px}.sub{text-align:center;color:#6d6455;font-size:14px;margin-bottom:26px;line-height:1.7}table{width:100%;border-collapse:collapse;background:#fffdf6;border:1px solid #e0d5b8;font-size:14px}th{background:#231F20;color:#EAEAEA;font-family:'Playfair Display',Georgia,serif;font-weight:600;text-align:left;padding:14px 18px;font-size:15.5px}td{padding:13px 18px;border-bottom:1px solid #ece2c8;color:#4c463a}td.p{font-weight:700;color:#8a6d2f;white-space:nowrap}tr:last-child td{border-bottom:0}.note{text-align:center;font-size:12.5px;color:#8a8172;margin-top:14px;line-height:1.7}footer{background:#231F20;color:#a49d8c;font-size:12.5px;text-align:center;padding:26px 6%;line-height:1.9;letter-spacing:.05em}@media(max-width:840px){.feats{grid-template-columns:1fr 1fr}nav ul{display:none}table{font-size:13px}}",
+      h:"<nav><div class='logo'>SASANA <span>GRAHA</span></div><ul><li>Gedung</li><li>Fasilitas</li><li>Harga</li><li>Galeri</li></ul><span class='book'>Cek Tanggal</span></nav><div class='hero'><div class='orn'>✦ ✦ ✦ ✦ ✦</div><h1>Hari bahagia layak dirayakan di <em>graha yang agung.</em></h1><p>Gedung pernikahan bergaya kolonial terawat di jantung kota — taman tropis 2.000 m², aula berpendingin penuh, dan tim pendamping sejak persiapan sampai tamu terakhir pulang.</p><a class='btn' href='#'>Lihat Daftar Harga</a></div><div class='feats'><div class='feat'><b>800</b><span>Tamu berdiri</span></div><div class='feat'><b>450</b><span>Tamu duduk</span></div><div class='feat'><b>120</b><span>Mobil parkir</span></div><div class='feat'><b>2.000 m²</b><span>Taman tropis</span></div></div><section><div class='wrap2'><div class='lbl'>Daftar Harga</div><h2>Paket Penggunaan Gedung 2026</h2><p class='sub'>Harga sudah termasuk aula, taman, ruang rias, dan pendamping acara. Katering dapat dibawa sendiri atau dipilih dari 6 rekanan kami.</p><table><tr><th>Paket</th><th>Kapasitas</th><th>Durasi</th><th>Harga</th></tr><tr><td><b>Intim</b> — hari kerja</td><td>150 tamu</td><td>4 jam</td><td class='p'>Rp 28 jt</td></tr><tr><td><b>Klasik</b> — akhir pekan</td><td>300 tamu</td><td>5 jam</td><td class='p'>Rp 46 jt</td></tr><tr><td><b>Agung</b> — akhir pekan + taman</td><td>450 tamu</td><td>6 jam</td><td class='p'>Rp 68 jt</td></tr><tr><td><b>Semesta</b> — seluruh kawasan</td><td>800 tamu</td><td>8 jam</td><td class='p'>Rp 95 jt</td></tr></table><p class='note'>Tanggal untuk musim pernikahan Oktober–Desember biasanya habis 8 bulan sebelumnya. Survei gedung gratis setiap Sabtu pukul 09.00–12.00.</p></div></section><footer>Sasana Graha · Jl. Diponegoro No. 45, Semarang<br/>© 2026 Sasana Graha Wedding Venue · Survei: halo@sasanagraha.id</footer>" },
+
+    { id:"sekar-ayu", cat:"bisnis", n:"Sekar Ayu — Wedding Organizer Pastel", d:"Perencana pernikahan bernuansa pastel blush, mint, dan peony: galeri tema, kartu paket, dan pendampingan hari-H yang tenang dari awal sampai akhir.", p:["#FFD6E7","#D4F5E9","#FFD8C0"], tags:["Wedding Organizer","Paket"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Quicksand:wght@400;500;600;700&family=Great+Vibes&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Quicksand',Arial,sans-serif;background:#FFFBF7;color:#43333C}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%}.logo{font-family:'Great Vibes',cursive;font-size:32px;color:#c26d8f}nav ul{display:flex;gap:24px;list-style:none;font-size:13.5px;font-weight:600;color:#8a6a76}.btn{display:inline-block;background:#c26d8f;color:#fff;font-weight:700;padding:12px 26px;border-radius:99px;font-size:13.5px}.hero{margin:4px 6% 0;border-radius:28px;background:linear-gradient(140deg,#FFD6E7,#D4F5E9 55%,#FFD8C0);padding:56px 7%;text-align:center}.hero .script{font-family:'Great Vibes',cursive;font-size:34px;color:#a8547a}.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(34px,5.6vw,54px);font-weight:600;font-style:italic;line-height:1.15;margin:8px auto 12px;max-width:22ch;color:#43333C}.hero p{color:#5d4750;line-height:1.75;max-width:54ch;margin:0 auto 24px;font-size:15px;font-weight:500}section{padding:46px 6% 8px}.wrap2{max-width:1060px;margin:0 auto}.lbl{text-align:center;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#c26d8f;font-weight:700}h2{font-family:'Cormorant Garamond',Georgia,serif;text-align:center;font-size:32px;font-weight:600;font-style:italic;margin:8px 0 26px}.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.theme{border-radius:20px;padding:24px;min-height:130px;display:flex;flex-direction:column;justify-content:flex-end}.theme b{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-style:italic;font-weight:600}.theme span{font-size:12.5px;font-weight:600;opacity:.75}.t1{background:#FFD6E7}.t2{background:#D4F5E9}.t3{background:#FFD8C0}.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:14px}.pack{background:#fff;border:2px solid #f3e2ea;border-radius:22px;padding:26px}.pack.hot{border-color:#FFD6E7;background:#fff7fa}.pack h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;font-style:italic;font-weight:600}.pack .num{font-size:27px;font-weight:700;color:#c26d8f;margin:8px 0}.pack .num span{font-size:13px;color:#8a6a76;font-weight:600}.pack li{list-style:none;font-size:13.5px;padding:6px 0;color:#5d4750;font-weight:500}.pack li::before{content:'✓ ';color:#c26d8f;font-weight:700}footer{text-align:center;padding:34px 6% 36px;color:#8a6a76;font-size:13px;line-height:1.9}.script2{font-family:'Great Vibes',cursive;font-size:26px;color:#c26d8f}@media(max-width:840px){.themes,.packs{grid-template-columns:1fr}nav ul{display:none}}",
+      h:"<nav><div class='logo'>Sekar Ayu</div><ul><li>Tema</li><li>Paket</li><li>Galeri</li><li>Cerita Pasangan</li></ul><a class='btn' href='#'>Konsultasi Gratis</a></nav><div class='hero'><div class='script'>selamat datang di</div><h1>Pernikahan lembut, seindah yang kamu bayangkan sejak kecil.</h1><p>Kami merencanakan, menata, dan mendampingi hari pernikahanmu — kamu cukup datang, tersenyum, dan menikmati hari yang tidak akan terulang.</p><a class='btn' href='#'>Mulai Cerita Kamu</a></div><section><div class='wrap2'><div class='lbl'>Galeri Tema</div><h2>Tiga nuansa, satu kelembutan</h2><div class='themes'><div class='theme t1'><b>Blush Garden</b><span>Mawar peony &amp; taman terbuka</span></div><div class='theme t2'><b>Mint Whisper</b><span>Eukaliptus &amp; kaca pagi hari</span></div><div class='theme t3'><b>Peach Dusk</b><span>Senja persik &amp; lilin temaram</span></div></div></div></section><section><div class='wrap2'><div class='lbl'>Kartu Paket</div><h2>Pilih pendampinganmu</h2><div class='packs'><div class='pack'><h3>Intim</h3><div class='num'>Rp 18 jt<span> / acara</span></div><ul><li>Koordinasi hari-H, 5 kru</li><li>50–100 tamu</li><li>Rundown &amp; gladi bersih</li></ul></div><div class='pack hot'><h3>Klasik</h3><div class='num'>Rp 32 jt<span> / acara</span></div><ul><li>Perencanaan 3 bulan penuh</li><li>100–300 tamu</li><li>Kurasi vendor &amp; dekorasi</li><li>8 kru di hari-H</li></ul></div><div class='pack'><h3>Mewah</h3><div class='num'>Rp 55 jt<span> / acara</span></div><ul><li>Perencanaan 6 bulan penuh</li><li>300–600 tamu</li><li>Konsep &amp; styling menyeluruh</li><li>12 kru di hari-H</li></ul></div></div></div></section><footer><span class='script2'>dengan cinta,</span><br/>Sekar Ayu Wedding · Bandung &amp; Jakarta · © 2026 Sekar Ayu Organizer</footer>" },
+
+    { id:"pelangi-kecil", cat:"kesehatan", n:"Pelangi Kecil — Klinik & Toko Bayi", d:"Klinik anak dan toko perlengkapan bayi bernuansa pastel yang menenteramkan: jadwal dokter anak, layanan imunisasi, dan etalase kebutuhan bayi dengan teks gelap yang nyaman dibaca.", p:["#D4F5E9","#FFD6E7","#FFD8C0"], tags:["Klinik Anak","Toko Bayi"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Quicksand',Arial,sans-serif;background:#FDFBF6;color:#37413C}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 6%;background:#fff}.logo{font-weight:700;font-size:21px;color:#37413C}.logo span{color:#d4698f}nav ul{display:flex;gap:22px;list-style:none;font-size:13.5px;font-weight:600;color:#6b7a72}.btn{display:inline-block;background:#37413C;color:#fff;font-weight:700;padding:11px 22px;border-radius:99px;font-size:13.5px}.hero{margin:14px 6% 0;border-radius:26px;background:#D4F5E9;padding:46px 7%;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}.hero h1{font-size:clamp(29px,4.6vw,44px);line-height:1.18;font-weight:700}.hero h1 span{color:#2f7d5c}.hero p{color:#4c5a53;line-height:1.75;margin:14px 0 22px;font-size:15px;font-weight:500}.sched{background:#fff;border-radius:20px;padding:22px}.sched h3{font-size:16px;margin-bottom:10px}.sched div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #dce8e1;font-size:13.5px;font-weight:600}.sched div:last-child{border-bottom:0}.sched b{color:#2f7d5c}section{padding:38px 6% 6px}.wrap2{max-width:1060px;margin:0 auto}h2{font-size:26px;font-weight:700;margin-bottom:18px}.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.sv{border-radius:20px;padding:24px}.sv h3{font-size:17.5px;margin-bottom:7px}.sv p{font-size:13.5px;line-height:1.7;font-weight:500;color:#45534b}.s1{background:#FFD6E7}.s2{background:#FFD8C0}.s3{background:#DCEEFF}.s1 p,.s2 p,.s3 p{color:#4c4238}.s2 p{color:#574433}.s3{background:#E4F0E6}.s3 p{color:#43544a}.shop{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-bottom:16px}.prod{background:#fff;border:1.5px solid #eee4d8;border-radius:18px;padding:16px}.prod .ph{height:96px;border-radius:12px;display:flex;align-items:flex-end;padding:10px;font-size:11px;font-weight:700;letter-spacing:.06em;color:#37413C}.q1{background:#FFD6E7}.q2{background:#D4F5E9}.q3{background:#FFD8C0}.q4{background:#EDE7FF}.prod h3{font-size:14.5px;margin:11px 0 3px}.prod p{font-size:12.5px;color:#7c8a82;font-weight:500}.prod .price{font-weight:700;color:#d4698f;margin-top:7px;font-size:15px}footer{background:#37413C;color:#cfe0d6;padding:24px 6%;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:30px;font-weight:500}@media(max-width:860px){.hero,.svc{grid-template-columns:1fr}.shop{grid-template-columns:1fr 1fr}nav ul{display:none}}",
+      h:"<nav><div class='logo'>Pelangi<span>Kecil</span></div><ul><li>Dokter Anak</li><li>Imunisasi</li><li>Toko Bayi</li><li>Kontak</li></ul><a class='btn' href='#'>Daftar Periksa</a></nav><div class='hero'><div><h1>Tumbuh sehat itu <span>perjalanan yang lembut.</span></h1><p>Klinik anak dengan ruang tunggu seperti ruang bermain, dokter yang sabar menjelaskan, dan toko perlengkapan bayi pilihan di tempat yang sama.</p><a class='btn' href='#'>Buat Janji Hari Ini</a></div><div class='sched'><h3>Jadwal Dokter Anak</h3><div><span>dr. Laras, Sp.A</span><b>Sen–Rab · 09.00</b></div><div><span>dr. Bima, Sp.A</span><b>Kam–Sab · 10.00</b></div><div><span>Imunisasi &amp; Tumbang</span><b>Setiap hari · 08.00</b></div><div><span>Konsultasi Laktasi</span><b>Sabtu · 13.00</b></div></div></div><section><div class='wrap2'><h2>Layanan Kami</h2><div class='svc'><div class='sv s1'><h3>Imunisasi Lengkap</h3><p>Jadwal mengikuti rekomendasi IDAI, dengan pengingat WhatsApp sebelum jadwal berikutnya tiba.</p></div><div class='sv s2'><h3>Pantau Tumbuh Kembang</h3><p>Pengukuran berkala dan skrining perkembangan, hasilnya dibacakan pelan-pelan untuk ayah dan bunda.</p></div><div class='sv s3'><h3>Konsultasi Laktasi &amp; MPASI</h3><p>Pendampingan menyusui dan menu MPASI pertama, tanpa menghakimi, dengan banyak contoh nyata.</p></div></div></div></section><section><div class='wrap2'><h2>Pilihan Toko Bayi</h2><div class='shop'><div class='prod'><div class='ph q1'>0–6 BULAN</div><h3>Set Baju Bayi Katun Bambu</h3><p>Isi 5, bebas pewarna keras</p><div class='price'>Rp 189.000</div></div><div class='prod'><div class='ph q2'>AMAN BPA</div><h3>Botol Susu Kaca 120 ml</h3><p>Dot aliran lambat anti kolik</p><div class='price'>Rp 96.000</div></div><div class='prod'><div class='ph q3'>ORGANIK</div><h3>Bubur Bayi Instan Organik</h3><p>Beras merah &amp; labu, tanpa pengawet</p><div class='price'>Rp 42.000</div></div><div class='prod'><div class='ph q4'>MAINAN EDUKASI</div><h3>Gantungan Rattle Kayu</h3><p>Kayu jati belanda, cat food-grade</p><div class='price'>Rp 75.000</div></div></div></div></section><footer><span>© 2026 Pelangi Kecil · Jl. Bunga Rampai No. 7, Jakarta Timur</span><span>UGD anak terdekat terhubung 24 jam</span></footer>" },
+
+    { id:"tirta", cat:"perjalanan", n:"Tirta — Wisata Bahari & Dive Trip", d:"Wisata laut tropis dengan aksen toska: paket snorkeling, dive trip, dan island hopping lengkap dengan jadwal keberangkatan, titik kumpul, dan harga per orang.", p:["#049B8B","#0F766E","#C6E7E4"], tags:["Wisata Bahari","Open Trip"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#ffffff;color:#17302B}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 6%}.logo{font-weight:800;font-size:22px;color:#0F766E}.logo span{color:#17302B}nav ul{display:flex;gap:24px;list-style:none;font-size:14px;color:#55706A}.btn{display:inline-block;background:#0F766E;color:#fff;font-weight:700;padding:12px 24px;border-radius:10px;font-size:14px}.hero{background:linear-gradient(150deg,#0F766E,#049B8B);color:#fff;padding:58px 6% 54px}.hero .kick{font-size:12px;letter-spacing:.22em;font-weight:700;color:#C6E7E4;text-transform:uppercase}.hero h1{font-family:'Merriweather',Georgia,serif;font-size:clamp(32px,5.4vw,52px);line-height:1.18;margin:14px 0;max-width:18ch}.hero p{color:#dcf2ee;line-height:1.7;max-width:52ch;font-size:15.5px;margin-bottom:24px}.hero .btn{background:#fff;color:#0F766E}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:30px 6% 8px}.trip{background:#fff;border:1px solid #dcebe8;border-radius:16px;overflow:hidden}.trip .ph{height:140px;display:flex;align-items:flex-end;padding:13px;color:#fff;font-weight:700;font-size:12.5px;letter-spacing:.08em}.w1{background:linear-gradient(150deg,#2bb3a3,#0F766E)}.w2{background:linear-gradient(150deg,#38b6c9,#1668a0)}.w3{background:linear-gradient(150deg,#7cc4b2,#3d7a5e)}.trip .b{padding:18px}.trip h3{font-family:'Merriweather',Georgia,serif;font-size:18.5px;margin-bottom:6px}.trip p{font-size:13.5px;color:#55706A;line-height:1.65}.trip .meta{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.trip .meta span{background:#C6E7E4;color:#0b5a52;font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:99px}.trip .foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eef4f2;padding-top:13px}.price{font-weight:800;color:#0F766E;font-size:17px}.price span{display:block;font-size:11.5px;color:#8aa39d;font-weight:600}.mini{font-size:12.5px;font-weight:700;color:#0F766E}section{padding:34px 6% 50px}.band{background:#f2faf8;border:1px solid #dcebe8;border-radius:16px;padding:26px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.band h2{font-family:'Merriweather',Georgia,serif;font-size:23px}.band p{color:#55706A;font-size:14px;line-height:1.65;margin-top:5px;max-width:56ch}footer{background:#0b352f;color:#a9ccc5;padding:25px 6%;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}@media(max-width:860px){.grid{grid-template-columns:1fr}nav ul{display:none}}",
+      h:"<nav><div class='logo'>TIRTA<span>.</span>bahari</div><ul><li>Open Trip</li><li>Dive Trip</li><li>Private Trip</li><li>Galeri</li></ul><a class='btn' href='#'>Pesan Kursi</a></nav><div class='hero'><div class='kick'>Wisata Bahari · Kepulauan Seribu &amp; Karimunjawa</div><h1>Laut sebening ini sayang kalau cuma jadi wallpaper.</h1><p>Berangkat setiap akhir pekan dari Muara Angke dan Jepara. Alat snorkeling, pemandu bersertifikat, dan makan siang ikan bakar sudah termasuk — kamu tinggal bawa baju ganti.</p><a class='btn' href='#'>Lihat Jadwal Berangkat</a></div><div class='grid'><article class='trip'><div class='ph w1'>PULAU PARI · 2 HARI 1 MALAM</div><div class='b'><h3>Snorkeling Pulau Pari</h3><p>Pantai Pasir Perawan, terumbu karang APL, dan sepeda santai keliling pulau.</p><div class='meta'><span>Setiap Sabtu</span><span>Maks 15 orang</span></div><div class='foot'><div class='price'><span>per orang</span>Rp 385 rb</div><span class='mini'>Pesan →</span></div></div></article><article class='trip'><div class='ph w2'>KARIMUNJAWA · 3 HARI 2 MALAM</div><div class='b'><h3>Dive Trip Karimunjawa</h3><p>Dua kali penyelaman untuk pemegang lisensi, satu sesi discovery untuk pemula.</p><div class='meta'><span>Jumat–Minggu</span><span>Instruktur PADI</span></div><div class='foot'><div class='price'><span>per orang</span>Rp 1,85 jt</div><span class='mini'>Pesan →</span></div></div></article><article class='trip'><div class='ph w3'>PULAU TIDUNG · 1 HARI</div><div class='b'><h3>Island Hopping Tidung</h3><p>Jembatan Cinta, banana boat, dan matahari terbenam dari ujung dermaga.</p><div class='meta'><span>Setiap hari</span><span>Tanpa menginap</span></div><div class='foot'><div class='price'><span>per orang</span>Rp 210 rb</div><span class='mini'>Pesan →</span></div></div></article></div><section><div class='band'><div><h2>Grup di atas 20 orang? Sewa kapalnya sekalian.</h2><p>Kapal kayu 40 penumpang dan speedboat 12 penumpang tersedia untuk gathering kantor, outing sekolah, dan acara keluarga di laut.</p></div><a class='btn' href='#'>Minta Penawaran</a></div></section><footer><span>© 2026 Tirta Bahari Wisata · Izin TDUP Pariwisata</span><span>Titik kumpul: Dermaga Kaliadem, Muara Angke</span></footer>" },
+
+    { id:"artha-catat", cat:"teknologi", n:"ArthaCatat — Aplikasi Pembukuan UMKM", d:"Landing aplikasi pembukuan untuk UMKM: halaman putih bersih, tombol aksi toska pekat, dan angka harga serta buku besar yang tersaji dalam huruf mono yang rapi.", p:["#049B8B","#0F766E","#C6E7E4"], tags:["Fintech","Pembukuan"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#ffffff;color:#1c2b28}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 6%;border-bottom:1px solid #e6efed}.logo{font-weight:800;font-size:21px}.logo span{color:#0F766E}nav ul{display:flex;gap:24px;list-style:none;font-size:14px;color:#5a6f6a}.btn{display:inline-block;background:#0F766E;color:#fff;font-weight:700;padding:12px 24px;border-radius:10px;font-size:14px}.btn.ghost{background:#fff;color:#1c2b28;border:1.5px solid #d5e2df}.hero{text-align:center;padding:56px 6% 26px}.hero .pill{display:inline-block;background:#C6E7E4;color:#0b5a52;font-size:12px;font-weight:700;padding:6px 13px;border-radius:99px}.hero h1{font-size:clamp(32px,5.4vw,52px);letter-spacing:-.02em;line-height:1.12;margin:16px auto 12px;max-width:20ch}.hero h1 span{color:#0F766E}.hero p{color:#5a6f6a;line-height:1.7;max-width:55ch;margin:0 auto 24px;font-size:15.5px}.mono{font-family:'JetBrains Mono',monospace}.ledger{max-width:820px;margin:30px auto 0;border:1px solid #dfeae7;border-radius:14px;overflow:hidden;text-align:left;box-shadow:0 22px 44px rgba(15,90,80,.10)}.ledger .lh{background:#0F766E;color:#fff;padding:13px 18px;font-weight:700;font-size:13.5px;display:flex;justify-content:space-between}.ledger table{width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:13px}.ledger td{padding:11px 18px;border-bottom:1px solid #eef4f2;color:#3c4f4a}.ledger td.r{text-align:right;font-weight:700;color:#1c2b28}.ledger tr.tot td{background:#f2faf8;font-weight:700;color:#0F766E}section{padding:46px 6%}.wrap2{max-width:1020px;margin:0 auto}h2{font-size:29px;letter-spacing:-.01em;text-align:center;margin-bottom:8px}.sub{text-align:center;color:#5a6f6a;margin-bottom:28px;font-size:14.5px}.price{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.plan{border:1px solid #e0eae7;border-radius:14px;padding:24px}.plan.hot{border:2px solid #0F766E}.plan h3{font-size:15.5px}.plan .num{font-family:'JetBrains Mono',monospace;font-size:27px;font-weight:700;margin:9px 0;color:#0F766E}.plan .num span{font-size:12.5px;color:#8aa39d;font-weight:500}.plan li{list-style:none;font-size:13.5px;color:#5a6f6a;padding:5px 0}.plan li::before{content:'✓ ';color:#0F766E;font-weight:700}footer{border-top:1px solid #e6efed;padding:24px 6%;color:#7d938d;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}@media(max-width:840px){.price{grid-template-columns:1fr}nav ul{display:none}.ledger table{font-size:11.5px}}",
+      h:"<nav><div class='logo'>Artha<span>Catat</span></div><ul><li>Fitur</li><li>Harga</li><li>Testimoni</li><li>Bantuan</li></ul><a class='btn' href='#'>Coba Gratis</a></nav><div class='hero'><span class='pill'>UNTUK WARUNG, TOKO, &amp; JASA</span><h1>Pembukuan rapi tanpa harus <span>jadi akuntan.</span></h1><p>Catat penjualan, stok, dan utang-piutang dari ponsel. Laporan laba-rugi dan arus kas tersusun sendiri — siap untuk pemilik usaha dan untuk bank.</p><a class='btn' href='#'>Mulai Gratis 30 Hari</a> <a class='btn ghost' href='#'>Lihat Contoh Laporan</a><div class='ledger'><div class='lh'><span>BUKU BESAR — OKTOBER 2026</span><span class='mono'>Saldo: Rp 18.452.000</span></div><table><tr><td>Penjualan toko</td><td class='r'>+ 24.810.000</td></tr><tr><td>Belanja stok &amp; bahan</td><td class='r'>− 9.375.000</td></tr><tr><td>Gaji 3 karyawan</td><td class='r'>− 7.500.000</td></tr><tr><td>Listrik, sewa, transport</td><td class='r'>− 3.983.000</td></tr><tr class='tot'><td>Laba bersih bulan ini</td><td class='r'>+ 3.952.000</td></tr></table></div></div><section><div class='wrap2'><h2>Harga jelas, dalam rupiah</h2><p class='sub'>Tanpa biaya per transaksi. Berhenti kapan saja, data tetap bisa diekspor.</p><div class='price'><div class='plan'><h3>Warung</h3><div class='num'>Rp 0<span> /selamanya</span></div><ul><li>100 transaksi / bulan</li><li>Catatan kas harian</li><li>1 pengguna</li></ul></div><div class='plan hot'><h3>Toko</h3><div class='num'>Rp 49.000<span> /bulan</span></div><ul><li>Transaksi tanpa batas</li><li>Stok &amp; utang-piutang</li><li>Laporan laba-rugi otomatis</li><li>3 pengguna</li></ul></div><div class='plan'><h3>Usaha</h3><div class='num'>Rp 119.000<span> /bulan</span></div><ul><li>Multi-cabang (3 lokasi)</li><li>Ekspor untuk konsultan pajak</li><li>Pengguna tanpa batas</li></ul></div></div></div></section><footer><span>© 2026 PT Artha Catat Digital</span><span>Data terenkripsi · tersimpan di Indonesia</span></footer>" },
+
+    { id:"mawar-beauty", cat:"kesehatan", n:"Mawar Beauty — Salon & Skincare", d:"Salon dan klinik skincare dengan pink jenuh untuk judul dan harga di atas putih kertas: menu perawatan yang terbaca sekilas dan booking yang tidak berbelit.", p:["#FF2CAD","#0B0B0B","#FFFFFF"], tags:["Salon","Skincare"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#FFFFFF;color:#0B0B0B}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:17px 6%;border-bottom:2px solid #0B0B0B}.logo{font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;letter-spacing:.14em}.logo span{color:#FF2CAD}nav ul{display:flex;gap:24px;list-style:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.btn{display:inline-block;background:#0B0B0B;color:#fff;font-weight:700;padding:12px 24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.btn.pink{background:#FF2CAD}.hero{padding:54px 6% 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}.kick{font-family:'Archivo',sans-serif;font-size:12px;font-weight:800;letter-spacing:.26em;color:#FF2CAD;text-transform:uppercase}.hero h1{font-family:'Archivo',sans-serif;font-size:clamp(36px,6vw,60px);font-weight:900;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;margin:14px 0}.hero h1 span{color:#FF2CAD}.hero p{color:#4c4c4c;line-height:1.75;font-size:15.5px;max-width:48ch;margin-bottom:24px}.card2{background:#0B0B0B;color:#fff;padding:28px}.card2 h3{font-family:'Archivo',sans-serif;letter-spacing:.14em;font-size:14px;text-transform:uppercase;color:#FF2CAD;margin-bottom:14px}.card2 div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed #3d3d3d;font-size:14px}.card2 div:last-child{border-bottom:0}.card2 b{color:#FF2CAD}section{padding:26px 6% 50px}h2{font-family:'Archivo',sans-serif;font-size:27px;font-weight:900;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}.sub{color:#6b6b6b;font-size:14px;margin-bottom:24px}.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px 48px}.mi{padding:15px 0;border-bottom:1px solid #ececec}.mi h3{display:flex;justify-content:space-between;font-size:16.5px;font-weight:700}.mi h3 b{color:#FF2CAD;white-space:nowrap;margin-left:14px}.mi p{font-size:13.5px;color:#6b6b6b;line-height:1.65;margin-top:4px}.band{background:#FF2CAD;color:#fff;text-align:center;padding:32px 6%}.band h2{color:#fff;margin-bottom:8px}.band p{opacity:.92;font-size:14.5px}footer{padding:24px 6%;font-size:13px;color:#6b6b6b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}@media(max-width:840px){.hero,.menu{grid-template-columns:1fr}nav ul{display:none}}",
+      h:"<nav><div class='logo'>MAWAR<span>BEAUTY</span></div><ul><li>Perawatan</li><li>Harga</li><li>Galeri</li><li>Kontak</li></ul><a class='btn pink' href='#'>Booking</a></nav><div class='hero'><div><div class='kick'>Salon &amp; Skincare — Sejak 2016</div><h1>Wajah segar, harga <span>terbaca jelas.</span></h1><p>Facial, perawatan rambut, dan konsultasi kulit dengan terapis bersertifikat. Semua harga tertulis di muka — tidak ada tambahan misterius di kasir.</p><a class='btn' href='#'>Lihat Menu Perawatan</a></div><div class='card2'><h3>Paling Dipesan Minggu Ini</h3><div><span>Signature Facial Glowing</span><b>Rp 249 rb</b></div><div><span>Creambath + Potong</span><b>Rp 179 rb</b></div><div><span>Manicure Gel Polish</span><b>Rp 149 rb</b></div><div><span>Konsultasi Kulit + Analisis</span><b>Gratis</b></div></div></div><section><h2>Menu Perawatan</h2><p class='sub'>Durasi tertulis di setiap layanan. Datang 10 menit lebih awal untuk konsultasi singkat.</p><div class='menu'><div class='mi'><h3>Signature Facial Glowing <b>Rp 249 rb</b></h3><p>75 menit — pembersihan ganda, ekstraksi lembut, masker vitamin C, dan pijat wajah.</p></div><div class='mi'><h3>Facial Acne Care <b>Rp 219 rb</b></h3><p>60 menit — untuk kulit berjerawat aktif, dengan serum anti-inflamasi dan LED therapy.</p></div><div class='mi'><h3>Creambath Spa Rambut <b>Rp 179 rb</b></h3><p>60 menit — krim alpukat atau makadamia, pijat kepala, dan blow kering natural.</p></div><div class='mi'><h3>Potong &amp; Styling <b>Rp 129 rb</b></h3><p>45 menit — konsultasi bentuk wajah dulu, baru gunting jalan. Termasuk cuci rambut.</p></div><div class='mi'><h3>Manicure Gel Polish <b>Rp 149 rb</b></h3><p>50 menit — 120 pilihan warna gel, awet 2–3 minggu, garansi retouch 3 hari.</p></div><div class='mi'><h3>Body Scrub &amp; Lulur <b>Rp 199 rb</b></h3><p>70 menit — lulur rempah tradisional, mandi susu, dan pelembap seluruh badan.</p></div></div></section><div class='band'><h2>Booking hari ini, kursi besok masih ada</h2><p>Pesan lewat WhatsApp — pilih layanan, hari, dan jam. Konfirmasi maksimal 15 menit di jam buka.</p></div><footer><span>© 2026 Mawar Beauty · Jl. Kenanga No. 3, Malang</span><span>Buka setiap hari 09.00–20.00 WIB</span></footer>" },
+
+    { id:"bloom-sekar", cat:"toko", n:"Bloom Sekar — Toko Bunga Online", d:"Toko bunga online bernuansa pink jenuh: koleksi buket per acara — ulang tahun, wisuda, pernikahan — dirangkai pagi hari dan diantar di hari yang sama.", p:["#FF2CAD","#FFFFFF","#33222B"], tags:["Toko Bunga","Buket"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#FFF7FA;color:#33222B}a{text-decoration:none;color:inherit}.bar{background:#FF2CAD;color:#fff;text-align:center;font-size:12px;font-weight:600;letter-spacing:.1em;padding:9px 6%}nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%}.logo{font-family:'Playfair Display',Georgia,serif;font-size:25px;font-weight:700}.logo span{color:#FF2CAD}nav ul{display:flex;gap:24px;list-style:none;font-size:13.5px;color:#7a5a68}.cart{background:#33222B;color:#fff;padding:9px 16px;border-radius:99px;font-weight:600;font-size:13px}.hero{text-align:center;padding:40px 6% 30px}.hero .kick{font-size:11.5px;font-weight:700;letter-spacing:.26em;color:#FF2CAD;text-transform:uppercase}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(36px,6vw,56px);font-weight:600;line-height:1.13;margin:14px auto 12px;max-width:20ch}.hero h1 em{color:#FF2CAD}.hero p{color:#7a5a68;line-height:1.75;max-width:52ch;margin:0 auto;font-size:15px}.cats{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:24px 6% 4px}.cats span{border:1.5px solid #f3c3dd;background:#fff;padding:8px 17px;border-radius:99px;font-size:13px;font-weight:600}.cats span.on{background:#FF2CAD;color:#fff;border-color:#FF2CAD}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 6% 50px}.item{background:#fff;border:1px solid #f6dcea;border-radius:16px;overflow:hidden}.item .ph{height:150px;display:flex;align-items:flex-end;padding:12px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em}.f1{background:linear-gradient(150deg,#ff7cc4,#FF2CAD)}.f2{background:linear-gradient(150deg,#ffb1d9,#f75fb4)}.f3{background:linear-gradient(150deg,#e75480,#b3126f)}.f4{background:linear-gradient(150deg,#ffc4de,#ff5cae)}.item .b{padding:15px}.item h3{font-family:'Playfair Display',Georgia,serif;font-size:17.5px;font-weight:600}.item p{font-size:12.5px;color:#96707f;line-height:1.6;margin-top:4px}.item .price{color:#FF2CAD;font-weight:800;font-size:16.5px;margin-top:9px}.item .buy{display:block;text-align:center;border:1.5px solid #33222B;border-radius:99px;padding:9px;font-weight:700;font-size:12.5px;margin-top:11px}footer{background:#33222B;color:#d9b7c6;padding:25px 6%;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}nav ul{display:none}}",
+      h:"<div class='bar'>PESAN SEBELUM 14.00 — DIANTAR HARI INI JUGA</div><nav><div class='logo'>Bloom<span>Sekar</span></div><ul><li>Buket</li><li>Papan Bunga</li><li>Langganan Kantor</li><li>Tentang</li></ul><span class='cart'>Keranjang (1)</span></nav><div class='hero'><div class='kick'>Toko Bunga Online · Jakarta &amp; Tangerang</div><h1>Bunga segar untuk <em>setiap maksud baik.</em></h1><p>Dirangkai pagi hari dari bunga pasokan Pasar Rawa Belong. Foto buket dikirim ke WhatsApp kamu sebelum kurir berangkat — tidak ada kejutan yang tidak menyenangkan.</p></div><div class='cats'><span class='on'>Semua Acara</span><span>Ulang Tahun</span><span>Wisuda</span><span>Pernikahan</span><span>Duka Cita</span><span>Grand Opening</span></div><div class='grid'><div class='item'><div class='ph f1'>TERLARIS</div><div class='b'><h3>Buket Mawar Ceria</h3><p>20 tangkai mawar pink + baby breath, kertas korea merah muda.</p><div class='price'>Rp 349.000</div><a class='buy' href='#'>+ Keranjang</a></div></div><div class='item'><div class='ph f2'>WISUDA</div><div class='b'><h3>Buket Lulus Ceria</h3><p>Gerbera dan krisan cerah + boneka wisuda mungil dan kartu ucapan.</p><div class='price'>Rp 289.000</div><a class='buy' href='#'>+ Keranjang</a></div></div><div class='item'><div class='ph f3'>PERNIKAHAN</div><div class='b'><h3>Buket Pengantin Klasik</h3><p>Peony dan mawar putih-pink, pita satin — dirangkai sesuai tema acara.</p><div class='price'>Rp 799.000</div><a class='buy' href='#'>+ Keranjang</a></div></div><div class='item'><div class='ph f4'>HARI IBU</div><div class='b'><h3>Keranjang Anyelir Ibu</h3><p>Anyelir pink dalam keranjang rotan + kartu tulisan tangan.</p><div class='price'>Rp 259.000</div><a class='buy' href='#'>+ Keranjang</a></div></div></div><footer><span>© 2026 Bloom Sekar Florist</span><span>Pengiriman instan 2–3 jam · Jakarta &amp; Tangerang</span></footer>" },
+
+    { id:"nusa-ai", cat:"teknologi", n:"NusaAI — Platform AI untuk UMKM", d:"Platform kecerdasan buatan untuk UMKM: pahlawan ungu pekat bergradasi magenta, kartu antarmuka produk, dan paket harga yang membuat AI terasa dekat dan terjangkau.", p:["#1E0A3C","#7C3AED","#E879F9"], tags:["AI","SaaS"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#150826;color:#f1ebfc}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:17px 6%}.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px}.logo span{background:linear-gradient(90deg,#7C3AED,#E879F9);-webkit-background-clip:text;background-clip:text;color:transparent}nav ul{display:flex;gap:24px;list-style:none;font-size:14px;color:#b9a8dd}.btn{display:inline-block;background:linear-gradient(90deg,#7C3AED,#C026D3);color:#fff;font-weight:700;padding:12px 24px;border-radius:12px;font-size:14px}.btn.ghost{background:transparent;border:1.5px solid #4c3585;color:#e6dcfb}.hero{padding:64px 6% 54px;text-align:center;background:radial-gradient(760px 340px at 50% -60px,rgba(124,58,237,.5),rgba(21,8,38,0))}.pill{display:inline-block;border:1px solid #4c3585;background:rgba(124,58,237,.18);color:#d9c8fa;font-size:12px;font-weight:600;padding:6px 14px;border-radius:99px}.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(35px,6vw,58px);line-height:1.1;margin:20px auto 14px;max-width:19ch}.hero h1 span{background:linear-gradient(90deg,#a78bfa,#E879F9);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:#b9a8dd;line-height:1.75;max-width:56ch;margin:0 auto 26px;font-size:15.5px}.ui{max-width:860px;margin:38px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:left}.uic{background:#1E0A3C;border:1px solid #38215f;border-radius:16px;padding:20px}.uic .tag2{font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#E879F9;text-transform:uppercase}.uic h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin:9px 0 6px}.uic p{font-size:13px;color:#a893cc;line-height:1.65}.uic .fig{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;margin-top:12px;background:linear-gradient(90deg,#a78bfa,#E879F9);-webkit-background-clip:text;background-clip:text;color:transparent}section{padding:48px 6%}.wrap2{max-width:1000px;margin:0 auto}h2{font-family:'Space Grotesk',sans-serif;font-size:30px;text-align:center;margin-bottom:8px}.sub{text-align:center;color:#a893cc;margin-bottom:28px;font-size:14.5px}.price{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.plan{background:#1E0A3C;border:1px solid #38215f;border-radius:16px;padding:25px}.plan.hot{border:2px solid #7C3AED}.plan h3{font-family:'Space Grotesk',sans-serif;font-size:16px}.plan .num{font-family:'Space Grotesk',sans-serif;font-size:31px;font-weight:700;margin:9px 0}.plan .num span{font-size:13px;color:#a893cc;font-weight:400}.plan li{list-style:none;font-size:13.5px;color:#b9a8dd;padding:5px 0}.plan li::before{content:'✓ ';color:#E879F9;font-weight:700}footer{border-top:1px solid #38215f;padding:24px 6%;color:#8f7bb5;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}@media(max-width:840px){.ui,.price{grid-template-columns:1fr}nav ul{display:none}}",
+      h:"<nav><div class='logo'>Nusa<span>AI</span></div><ul><li>Produk</li><li>Solusi</li><li>Harga</li><li>Blog</li></ul><a class='btn' href='#'>Mulai Gratis</a></nav><div class='hero'><span class='pill'>DILATIH DENGAN BAHASA INDONESIA — TERMASUK SAPAAN TOKO KAMU</span><h1>AI yang menjawab pelanggan seperti <span>karyawan terbaikmu.</span></h1><p>NusaAI membaca katalog, harga, dan kebijakan toko kamu, lalu menjawab chat WhatsApp dan marketplace dalam hitungan detik — sopan, akurat, dan tetap terasa manusiawi.</p><a class='btn' href='#'>Coba 14 Hari Gratis</a> <a class='btn ghost' href='#'>Tonton Demo 2 Menit</a><div class='ui'><div class='uic'><span class='tag2'>Asisten Chat</span><h3>Balas Otomatis 24 Jam</h3><p>Pertanyaan stok, ongkir, dan cara order dijawab tanpa kamu pegang ponsel.</p><div class='fig'>3,1 dtk</div></div><div class='uic'><span class='tag2'>Penulis Produk</span><h3>Deskripsi Sekali Klik</h3><p>Foto produk masuk, deskripsi jualan untuk 3 marketplace keluar sekaligus.</p><div class='fig'>12× lebih cepat</div></div><div class='uic'><span class='tag2'>Ringkasan</span><h3>Laporan Suara Pagi</h3><p>Ringkasan penjualan kemarin dibacakan sebagai pesan suara tiap pukul 07.00.</p><div class='fig'>07.00 WIB</div></div></div></div><section><div class='wrap2'><h2>Harga untuk skala UMKM</h2><p class='sub'>Dalam rupiah, tanpa kartu kredit untuk memulai. Berhenti kapan saja.</p><div class='price'><div class='plan'><h3>Pemula</h3><div class='num'>Rp 99 rb<span>/bulan</span></div><ul><li>1 kanal chat</li><li>500 percakapan / bulan</li><li>Penulis deskripsi produk</li></ul></div><div class='plan hot'><h3>Tumbuh</h3><div class='num'>Rp 249 rb<span>/bulan</span></div><ul><li>3 kanal chat</li><li>2.500 percakapan / bulan</li><li>Ringkasan suara pagi</li><li>2 pengguna tim</li></ul></div><div class='plan'><h3>Maju</h3><div class='num'>Rp 599 rb<span>/bulan</span></div><ul><li>Kanal tanpa batas</li><li>Percakapan tanpa batas</li><li>Pelatihan data khusus</li><li>Dukungan prioritas</li></ul></div></div></div></section><footer><span>© 2026 NusaAI Teknologi</span><span>Data pelanggan tidak dipakai melatih model publik</span></footer>" },
+
+    { id:"sinar-taxi", cat:"perjalanan", n:"Sinar Taxi & Rental", d:"Pemesanan taksi dan rental mobil kuning–hitam yang tegas: tabel tarif per zona tertulis hitam di atas kuning, pilihan armada, dan pemesanan cepat lewat satu formulir.", p:["#FDEC00","#403F45","#FFFFFF"], tags:["Transportasi","Rental"],
+      s:"@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');*{margin:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#FFFFFF;color:#26252a}a{text-decoration:none;color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:15px 6%;background:#403F45;color:#fff}.logo{font-family:'Anton',sans-serif;font-size:23px;letter-spacing:.05em}.logo span{color:#FDEC00}nav ul{display:flex;gap:24px;list-style:none;font-size:13.5px;font-weight:600}.tel{background:#FDEC00;color:#26252a;font-weight:800;padding:9px 17px;border-radius:8px;font-size:13.5px}.hero{background:#FDEC00;color:#1d1c20;padding:52px 6% 46px}.hero .kick{display:inline-block;background:#26252a;color:#FDEC00;font-weight:800;font-size:11.5px;letter-spacing:.16em;padding:6px 12px;text-transform:uppercase}.hero h1{font-family:'Anton',sans-serif;font-size:clamp(40px,7.4vw,74px);line-height:1.02;letter-spacing:.01em;margin:16px 0 12px;text-transform:uppercase}.hero p{font-size:16px;line-height:1.7;max-width:54ch;font-weight:500;margin-bottom:24px}.form{background:#26252a;border-radius:12px;padding:10px;display:flex;gap:8px;max-width:780px;flex-wrap:wrap}.form span{flex:1;min-width:140px;background:#fff;color:#6d6c74;font-size:12px;padding:10px 13px;border-radius:8px}.form b{color:#26252a;display:block;font-size:14.5px;margin-top:2px}.form button{background:#FDEC00;border:0;color:#26252a;font-weight:800;padding:0 26px;border-radius:8px;font-size:14.5px;cursor:pointer}section{padding:42px 6%}.wrap2{max-width:920px;margin:0 auto}h2{font-family:'Anton',sans-serif;font-size:29px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px}.sub{color:#6d6c74;font-size:14px;margin-bottom:22px;line-height:1.65}table{width:100%;border-collapse:collapse;font-size:14px;border:2px solid #403F45}th{background:#403F45;color:#FDEC00;text-align:left;padding:13px 16px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}td{padding:12px 16px;border-bottom:1px solid #e7e6e0;color:#3c3b41}td.f{font-weight:800;color:#26252a;white-space:nowrap}tr:last-child td{border-bottom:0}.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.car{border:2px solid #403F45;padding:22px}.car .tp{font-family:'Anton',sans-serif;font-size:21px;letter-spacing:.03em;text-transform:uppercase}.car p{font-size:13.5px;color:#6d6c74;line-height:1.65;margin:7px 0 11px}.car .rate{font-weight:800;font-size:17px}.car .rate span{font-size:12px;color:#6d6c74;font-weight:600}footer{background:#403F45;color:#c9c8cd;padding:25px 6%;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}@media(max-width:840px){.fleet{grid-template-columns:1fr}nav ul{display:none}.form button{width:100%;padding:13px}}",
+      h:"<nav><div class='logo'>SINAR<span>TAXI</span></div><ul><li>Tarif</li><li>Armada</li><li>Rental Harian</li><li>Untuk Perusahaan</li></ul><span class='tel'>☎ (021) 555-0167</span></nav><div class='hero'><span class='kick'>Taksi &amp; Rental · Jabodetabek</span><h1>Jemput cepat, tarif jujur, tanpa drama.</h1><p>Armada tiba rata-rata 9 menit di dalam kota. Tarif per zona tertulis jelas di bawah — yang kamu baca, itu yang kamu bayar.</p><div class='form'><span>Jemput dari<b>Stasiun Gambir</b></span><span>Tujuan<b>Bandara Soekarno–Hatta</b></span><span>Waktu<b>Hari ini · 14.30</b></span><button type='button'>Cek Tarif</button></div></div><section><div class='wrap2'><h2>Tabel Tarif per Zona</h2><p class='sub'>Tarif tetap untuk taksi reguler, sudah termasuk tol dan parkir bandara. Tanpa biaya malam hari, tanpa biaya macet.</p><table><tr><th>Rute</th><th>Jarak</th><th>Reguler</th><th>Eksekutif</th></tr><tr><td>Dalam kota (per zona)</td><td>0–8 km</td><td class='f'>Rp 48.000</td><td class='f'>Rp 85.000</td></tr><tr><td>Jakarta Pusat → Bandara Soetta</td><td>± 28 km</td><td class='f'>Rp 185.000</td><td class='f'>Rp 290.000</td></tr><tr><td>Jakarta Selatan → Bandara Halim</td><td>± 12 km</td><td class='f'>Rp 95.000</td><td class='f'>Rp 160.000</td></tr><tr><td>Depok → Bogor Kota</td><td>± 35 km</td><td class='f'>Rp 175.000</td><td class='f'>Rp 275.000</td></tr></table></div></section><section style='padding-top:0'><div class='wrap2'><h2>Pilihan Armada Rental</h2><p class='sub'>Rental harian dengan sopir, bahan bakar dibicarakan di muka — tertulis di nota, bukan di akhir.</p><div class='fleet'><div class='car'><div class='tp'>City Car</div><p>4 penumpang + bagasi ringan. Untuk dalam kota dan perjalanan dinas singkat.</p><div class='rate'>Rp 450 rb<span> / 12 jam + sopir</span></div></div><div class='car'><div class='tp'>MPV Keluarga</div><p>6–7 penumpang, kabin lega. Langganan keluarga untuk luar kota dan liburan.</p><div class='rate'>Rp 650 rb<span> / 12 jam + sopir</span></div></div><div class='car'><div class='tp'>Eksekutif</div><p>Sedan premium + sopir berjas. Untuk tamu perusahaan dan acara resmi.</p><div class='rate'>Rp 950 rb<span> / 12 jam + sopir</span></div></div></div></div></section><footer><span>© 2026 Sinar Taxi &amp; Rental · Izin angkutan resmi DKI Jakarta</span><span>Pesan 24 jam: (021) 555-0167</span></footer>" }
     ];
+
+    /* ============================================================
+       DATA TAMBAHAN — diturunkan dari berkas tiap template itu
+       sendiri: tipografi dibaca dari CSS-nya, dan ukuran berkas
+       dihitung langsung dari panjang berkas utuh hasil buildDoc().
+       Setiap template memikul SATU keluarga warna dominan yang
+       ditetapkan dari latar dan aksen utamanya — satu label saja,
+       bukan sekadar warna yang kebetulan terkandung di dalamnya.
+       ============================================================ */
+    var SPECS = {
+      "korporat-klasik":  { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Biru"],       ed: true },
+      "agensi-berani":    { typo: "Arial / Helvetica (sans)",                       fam: ["Kuning"] },
+      "fashion-minimal":  { typo: "Helvetica Neue / Arial (sans)",                  fam: ["Cokelat"],    ed: true },
+      "gadget-store":     { typo: "Arial / Helvetica (sans)",                       fam: ["Biru"] },
+      "fotografer":       { typo: "Helvetica Neue / Arial (sans) · Georgia (serif)", fam: ["Monokrom"] },
+      "desainer-warna":   { typo: "Arial / Helvetica (sans)",                       fam: ["Oranye"] },
+      "majalah-pagi":     { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Merah"] },
+      "blog-jelajah":     { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Hijau"] },
+      "restoran-elegan":  { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Hijau"],      ed: true },
+      "kedai-kopi":       { typo: "Georgia (serif) · Arial / Helvetica (sans)",     fam: ["Cokelat"] },
+      "saas-analitik":    { typo: "Arial / Helvetica (sans)",                       fam: ["Biru"],       ed: true },
+      "startup-ai":       { typo: "Arial / Helvetica (sans) · Courier New (mono)",  fam: ["Hijau"],      baru: true },
+      "klinik-sehat":     { typo: "Arial / Helvetica (sans)",                       fam: ["Toska"] },
+      "yoga-wellness":    { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Hijau"],      baru: true },
+      "kursus-online":    { typo: "Arial / Helvetica (sans)",                       fam: ["Ungu"] },
+      "sekolah-cendekia": { typo: "Arial / Helvetica (sans)",                       fam: ["Biru"] },
+      "properti-prime":   { typo: "Arial / Helvetica (sans)",                       fam: ["Toska"] },
+      "studio-arsitektur":{ typo: "Helvetica Neue / Arial (sans)",                  fam: ["Monokrom"],   ed: true },
+      "wisata-nusantara": { typo: "Arial / Helvetica (sans)",                       fam: ["Hijau"] },
+      "hotel-samudra":    { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Emas"],       ed: true },
+      "musisi-band":      { typo: "Arial / Helvetica (sans)",                       fam: ["Merah"] },
+      "festival-event":   { typo: "Arial / Helvetica (sans)",                       fam: ["Ungu"],       baru: true },
+      "aplikasi-mobile":  { typo: "Arial / Helvetica (sans)",                       fam: ["Oranye"] },
+      "ebook-produk":     { typo: "Georgia (serif) · Arial (sans)",                 fam: ["Cokelat"],    baru: true },
+      "aurum":            { typo: "Playfair Display (serif) · Inter (sans)",        fam: ["Emas"],       baru: true },
+      "sasana-graha":     { typo: "Playfair Display (serif) · Inter (sans)",        fam: ["Emas"],       baru: true },
+      "sekar-ayu":        { typo: "Cormorant Garamond (serif) · Quicksand (sans) · Great Vibes (aksen script)", fam: ["Pastel"], baru: true },
+      "pelangi-kecil":    { typo: "Quicksand (sans)",                               fam: ["Pastel"],     baru: true },
+      "tirta":            { typo: "Merriweather (serif) · Inter (sans)",            fam: ["Toska"],      baru: true },
+      "artha-catat":      { typo: "Inter (sans) · JetBrains Mono (mono)",           fam: ["Toska"],      baru: true },
+      "mawar-beauty":     { typo: "Archivo (sans) · Inter (sans)",                   fam: ["Merah Muda"], baru: true },
+      "bloom-sekar":      { typo: "Playfair Display (serif) · Inter (sans)",        fam: ["Merah Muda"], baru: true },
+      "nusa-ai":          { typo: "Space Grotesk (sans) · Inter (sans)",            fam: ["Ungu"],       baru: true },
+      "sinar-taxi":       { typo: "Anton (sans) · Inter (sans)",                    fam: ["Kuning"],     baru: true }
+    };
+    var FAMS = [
+      { n: "Emas", c: "#c9a24b" }, { n: "Biru", c: "#2f6fb2" }, { n: "Hijau", c: "#3e7d5a" },
+      { n: "Merah", c: "#b91c1c" }, { n: "Ungu", c: "#6c4bd8" }, { n: "Oranye", c: "#e4572e" },
+      { n: "Cokelat", c: "#7a5230" }, { n: "Pastel", c: "#ecd9c0" }, { n: "Merah Muda", c: "#e77b9e" },
+      { n: "Monokrom", c: "#44403a" }, { n: "Toska", c: "#0e9484" }, { n: "Kuning", c: "#eec400" }
+    ];
+    var LICENSE = "Gratis — bebas pakai pribadi & komersial";
+    var TECH = "HTML · CSS · JavaScript — satu berkas mandiri";
+    function specOf(t){ return SPECS[t.id] || { typo: "Serif / sans bawaan tema", fam: [] }; }
+    function fileKB(t){ return (buildDoc(t).length / 1024).toFixed(1).replace(".", ",") + " KB"; }
+
+    /* Koleksi Saya — tersimpan hanya di peramban ini, tanpa akun.
+       Halaman tetap berfungsi penuh bila penyimpanan tidak tersedia. */
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem("galeri-koleksi") || "{}") || {}; } catch (e) { saved = {}; }
+    function isSaved(id){ return !!saved[id]; }
+    function savedCount(){ return Object.keys(saved).filter(function(k){ return saved[k]; }).length; }
+    function persistSaved(){ try { localStorage.setItem("galeri-koleksi", JSON.stringify(saved)); } catch (e) {} }
 
     /* ============================================================
        RENDER GALERI
@@ -419,7 +629,7 @@
     var chipsBox = document.getElementById("chips");
     var qInput = document.getElementById("q");
     var emptyBox = document.getElementById("empty");
-    var state = { cat: "semua", q: "", sort: "kategori" };
+    var state = { cat: "semua", q: "", sort: "kategori", color: null };
 
     document.getElementById("statTpl").textContent = TEMPLATES.length;
     document.getElementById("statCat").textContent = CATS.length;
@@ -433,6 +643,9 @@
         var n = TEMPLATES.filter(function(t){return t.cat===c.id;}).length;
         html += "<button type='button' class='chip" + (state.cat===c.id?" active":"") + "' data-cat='" + c.id + "'>" + esc(c.name) + "<small>" + n + "</small></button>";
       });
+      var edN = TEMPLATES.filter(function(t){ return specOf(t).ed; }).length;
+      html += "<button type='button' class='chip" + (state.cat==="editor"?" active":"") + "' data-cat='editor'>Pilihan Editor<small>" + edN + "</small></button>";
+      html += "<button type='button' class='chip" + (state.cat==="koleksi"?" active":"") + "' data-cat='koleksi'>Koleksi Saya<small>" + savedCount() + "</small></button>";
       chipsBox.innerHTML = html;
       chipsBox.querySelectorAll(".chip").forEach(function(ch){
         ch.addEventListener("click", function(){
@@ -443,7 +656,10 @@
     }
 
     function matches(t){
-      if (state.cat !== "semua" && t.cat !== state.cat) return false;
+      if (state.cat === "editor" && !specOf(t).ed) return false;
+      if (state.cat === "koleksi" && !isSaved(t.id)) return false;
+      if (state.cat !== "semua" && state.cat !== "editor" && state.cat !== "koleksi" && t.cat !== state.cat) return false;
+      if (state.color && specOf(t).fam.indexOf(state.color) === -1) return false;
       if (!state.q) return true;
       var hay = (t.n + " " + t.d + " " + catName(t.cat) + " " + t.tags.join(" ")).toLowerCase();
       return hay.indexOf(state.q) !== -1;
@@ -460,9 +676,12 @@
        Nomor seri (no) adalah identitas template — tidak pernah dihitung ulang
        hanya karena urutan tampilan berubah. */
     function cardHtml(t, no){
+      var sp = specOf(t);
+      var plaque = sp.ed ? "<span class='plaque'>Pilihan Editor</span>" : (sp.baru ? "<span class='plaque'>Baru</span>" : "");
+      var mark = isSaved(t.id) ? "<span class='savedmark' title='Tersimpan di Koleksi Saya'><svg width='15' height='19' viewBox='0 0 12 16' aria-hidden='true'><path d='M1.5 1h9v13.5L6 11l-4.5 3.5z' fill='currentColor'/></svg></span>" : "";
       return "<article class='card' data-id='" + t.id + "'>"
-        + "<div class='thumb' data-open='" + t.id + "' title='Tekan untuk melihat pratinjau lengkap'><iframe title='Cuplikan " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe><span class='open'>Tekan untuk lihat semua</span></div>"
-        + "<div class='cardbody'><span class='no'>Nº " + ("0" + no).slice(-2) + "</span><h3>" + esc(t.n) + "</h3><span class='catlbl'>" + esc(catName(t.cat)) + "</span>"
+        + "<div class='thumb' data-open='" + t.id + "' title='Tekan untuk melihat pratinjau lengkap'><iframe title='Cuplikan " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe><span class='open'>Tekan untuk lihat semua</span>" + mark + "</div>"
+        + "<div class='cardbody'><div class='norow'><span class='no'>Nº " + ("0" + no).slice(-2) + "</span>" + plaque + "</div><h3>" + esc(t.n) + "</h3><span class='catlbl'>" + esc(catName(t.cat)) + "</span>"
         + "<div class='actions'><button type='button' class='btn primary grow' data-open='" + t.id + "'>Lihat Pratinjau</button></div>"
         + "</div></article>";
     }
@@ -471,15 +690,14 @@
       renderChips();
       var anyVisible = false;
       var html = "";
-      /* Saringan kategori + pencarian diterapkan lebih dulu. Nomor seri
-         dihitung per kategori dari daftar yang lolos saringan, sehingga Nº
-         yang sama melekat pada template di semua mode urutan. */
+      /* Nomor seri adalah urutan template dalam katalog keseluruhan —
+         identitas tetap yang tidak berubah oleh saringan maupun mode
+         urutan, dan berlanjut terus untuk template yang menyusul. */
       var byCat = {};
       var serial = {};
+      TEMPLATES.forEach(function(t, ti){ serial[t.id] = ti + 1; });
       CATS.forEach(function(c){
-        var list = TEMPLATES.filter(function(t){ return t.cat===c.id && matches(t); });
-        byCat[c.id] = list;
-        list.forEach(function(t, ti){ serial[t.id] = ti + 1; });
+        byCat[c.id] = TEMPLATES.filter(function(t){ return t.cat===c.id && matches(t); });
       });
       if (state.sort === "kategori"){
         CATS.forEach(function(c, ci){
@@ -506,6 +724,13 @@
       }
       main.innerHTML = html;
       emptyBox.style.display = anyVisible ? "none" : "block";
+      if (!anyVisible && state.cat === "koleksi" && savedCount() === 0){
+        document.getElementById("emptyTitle").textContent = "Koleksi Saya masih kosong";
+        document.getElementById("emptyText").textContent = "Buka pratinjau template yang kamu sukai, lalu tekan tombol Simpan — template itu akan menunggumu di sini.";
+      } else {
+        document.getElementById("emptyTitle").textContent = "Tidak ada template yang cocok";
+        document.getElementById("emptyText").textContent = "Coba kata kunci lain, atau pilih kategori “Semua”.";
+      }
 
       main.querySelectorAll(".thumb").forEach(function(w){
         fitThumb(w);
@@ -590,15 +815,54 @@
     var current = null;       /* template object */
     var currentRaw = null;    /* raw html string (kode tempelan sendiri) */
 
+    var pvSaveBtn = document.getElementById("pvSave");
+    function syncSaveBtn(){
+      if (!current){ pvSaveBtn.classList.remove("saved"); pvSaveBtn.setAttribute("aria-pressed", "false"); return; }
+      var on = isSaved(current.id);
+      pvSaveBtn.classList.toggle("saved", on);
+      pvSaveBtn.setAttribute("aria-pressed", on ? "true" : "false");
+      document.getElementById("pvSaveLbl").textContent = on ? "Tersimpan" : "Simpan";
+    }
+    pvSaveBtn.addEventListener("click", function(){
+      if (!current) return;
+      if (isSaved(current.id)) delete saved[current.id]; else saved[current.id] = 1;
+      persistSaved();
+      syncSaveBtn();
+      toast(isSaved(current.id) ? "“" + current.n + "” masuk Koleksi Saya ✓" : "“" + current.n + "” dikeluarkan dari Koleksi Saya");
+      render();
+    });
+
     function openPreview(id){
       var t = byId(id); if (!t) return;
       current = t; currentRaw = null;
       pvName.firstChild.textContent = t.n;
       document.getElementById("pvCat").textContent = catName(t.cat) + " · satu file HTML mandiri";
       document.getElementById("pvDesc").textContent = t.d;
-      document.getElementById("pvPal").innerHTML = t.p.map(function(col){ return "<span class='dot' style='background:" + col + "'></span><span class='hex'>" + col + "</span>"; }).join("");
-      document.getElementById("pvTags").innerHTML = t.tags.map(function(x){ return "<span class='tag'>" + esc(x) + "</span>"; }).join("");
-      document.getElementById("pvInfo").classList.add("show");
+      var sp = specOf(t);
+      var palHtml = t.p.map(function(col){ return "<span class='dot' style='background:" + col + "'></span><span class='hex'>" + col + "</span>"; }).join(" ");
+      var rows = [
+        ["Kategori", esc(catName(t.cat))],
+        ["Teknologi", TECH],
+        ["Palet Warna", "<span class='pal'>" + palHtml + "</span>"],
+        ["Tipografi", esc(sp.typo)],
+        ["Jenis", t.tags.map(function(x){ return esc(x); }).join(" · ")],
+        ["Lisensi", LICENSE],
+        ["Ukuran Berkas", "± " + fileKB(t)],
+        ["Kredit", "Koleksi Galeri Template Website"]
+      ];
+      document.getElementById("pvSpec").innerHTML = rows.map(function(r){ return "<tr><th scope='row'>" + r[0] + "</th><td>" + r[1] + "</td></tr>"; }).join("");
+      var rel = TEMPLATES.filter(function(x){ return x.cat === t.cat && x.id !== t.id; });
+      TEMPLATES.forEach(function(x){ if (rel.length < 3 && x.id !== t.id && rel.indexOf(x) === -1 && specOf(x).ed) rel.push(x); });
+      rel = rel.slice(0, 3);
+      document.getElementById("pvRel").innerHTML = rel.map(function(x){ return "<button type='button' class='relbtn' data-rel='" + x.id + "'><b>" + esc(x.n) + "</b><span>" + esc(catName(x.cat)) + "</span></button>"; }).join("");
+      document.querySelectorAll("#pvRel [data-rel]").forEach(function(b){
+        b.addEventListener("click", function(){ openPreview(b.getAttribute("data-rel")); });
+      });
+      pvSaveBtn.style.display = "";
+      syncSaveBtn();
+      var info = document.getElementById("pvInfo");
+      info.classList.add("show");
+      info.scrollTop = 0;
       setWidth("100%");
       pvFrame.setAttribute("srcdoc", buildDoc(t));
       pvModal.classList.add("show");
@@ -608,6 +872,7 @@
       current = null; currentRaw = html;
       pvName.firstChild.textContent = label || "Kode Kamu";
       document.getElementById("pvCat").textContent = "Pratinjau tempelan sendiri";
+      pvSaveBtn.style.display = "none";
       document.getElementById("pvInfo").classList.remove("show");
       setWidth("100%");
       pvFrame.setAttribute("srcdoc", html);
@@ -674,6 +939,57 @@
       var code = document.getElementById("customCode").value.trim();
       if (!code){ toast("Tempel dulu kode HTML-nya"); return; }
       openRawPreview(code, "Kode Kamu");
+    });
+
+    /* ============================================================
+       SARING WARNA — deretan contoh warna keluarga palet
+       ============================================================ */
+    var colorRow = document.getElementById("colorRow");
+    function renderColors(){
+      var html = "<span class='clbl'>Warna</span>";
+      FAMS.forEach(function(f){
+        var nFam = TEMPLATES.filter(function(t){ return specOf(t).fam.indexOf(f.n) !== -1; }).length;
+        if (!nFam) return;
+        html += "<button type='button' class='swbtn" + (state.color === f.n ? " active" : "") + "' data-color='" + f.n + "' aria-pressed='" + (state.color === f.n ? "true" : "false") + "'><span class='sw' style='background:" + f.c + "'></span>" + f.n + "<small>" + nFam + "</small></button>";
+      });
+      colorRow.innerHTML = html;
+      colorRow.querySelectorAll(".swbtn").forEach(function(b){
+        b.addEventListener("click", function(){
+          var c = b.getAttribute("data-color");
+          state.color = state.color === c ? null : c;
+          renderColors();
+          render();
+        });
+      });
+    }
+    renderColors();
+
+    /* ============================================================
+       TABEL BANDINGKAN SEKILAS — seluruh koleksi, nama membuka modal
+       ============================================================ */
+    var cmpBody = document.getElementById("cmpBody");
+    cmpBody.innerHTML = TEMPLATES.map(function(t){
+      var dots = t.p.map(function(col){ return "<span class='dot' style='background:" + col + "'></span>"; }).join("");
+      return "<tr><td><button type='button' class='tname' data-open='" + t.id + "'>" + esc(t.n) + "</button></td>"
+        + "<td>" + esc(catName(t.cat)) + "</td>"
+        + "<td><span class='mini'>" + dots + "</span></td>"
+        + "<td class='colx'>HTML · CSS · JavaScript</td>"
+        + "<td class='colx'>Gratis</td></tr>";
+    }).join("");
+    cmpBody.querySelectorAll("[data-open]").forEach(function(el){
+      el.addEventListener("click", function(){ openPreview(el.getAttribute("data-open")); });
+    });
+
+    /* ============================================================
+       AKORDEON TANYA JAWAB
+       ============================================================ */
+    document.querySelectorAll(".faq-q").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var item = btn.parentElement;
+        var open = item.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.querySelector(".pm").textContent = open ? "–" : "+";
+      });
     });
 
     render();

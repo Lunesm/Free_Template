@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="Galeri template website gratis yang elegan — 1200 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
-    <meta property="og:title" content="Galeri Template Website — 1200 Desain Gratis &amp; Elegan" />
-    <meta property="og:description" content="Galeri template website gratis yang elegan — 1200 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta name="description" content="Galeri template website gratis yang elegan — 1.000 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta property="og:title" content="Galeri Template Website — 1.000 Desain Gratis &amp; Elegan" />
+    <meta property="og:description" content="Galeri template website gratis yang elegan — 1.000 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://muse.ai/s/galeri-template-website-xjxf6udxaxpa6xvd" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Galeri Template Website — 1200 Desain Gratis &amp; Elegan" />
-    <meta name="twitter:description" content="Galeri template website gratis yang elegan — 1200 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
+    <meta name="twitter:title" content="Galeri Template Website — 1.000 Desain Gratis &amp; Elegan" />
+    <meta name="twitter:description" content="Galeri template website gratis yang elegan — 1.000 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111111'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%23c9a24b' stroke-width='5'/%3E%3Cpath d='M32 20 L44 32 L32 44 L20 32 Z' fill='%23c9a24b'/%3E%3C/svg%3E" />
     <title>Galeri Template Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +36,7 @@
       :focus-visible{outline:1.5px solid var(--accent);outline-offset:2px}
       html{scroll-behavior:smooth}
       body{margin:0;color:var(--ink);font-family:"Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased;
-        background:linear-gradient(178deg, var(--bg) 0%, var(--bg2) 150%);background-attachment:fixed}
+        background:linear-gradient(178deg, var(--bg) 0%, var(--bg2) 150%)}
       .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
       /* ---------- header ---------- */
       header.top{padding:58px 0 26px;text-align:center}
@@ -108,6 +108,12 @@
       .card{background:var(--surface);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(23,20,16,.05),0 16px 28px -20px rgba(23,20,16,.28);transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease}
       .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:var(--shadow)}
       @media (prefers-reduced-motion: reduce){ .card{transition:none} .card:hover{transform:none} }
+      .card{content-visibility:auto;contain-intrinsic-size:auto 340px}
+      section.cat{content-visibility:auto;contain-intrinsic-size:auto 900px}
+      footer.site .edition{margin-top:16px;font-size:10.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+      .moderow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0 4px}
+      .moderow .lbl{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+      .modeinfo{font-size:12px;color:var(--muted);line-height:1.5;flex:1;min-width:200px}
       /* Pratinjau sebagian: hanya potongan atas template yang terlihat.
          Pratinjau penuh dibuka saat kartu/tombol ditekan (modal). */
       .thumb{position:relative;height:128px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);cursor:pointer}
@@ -201,7 +207,7 @@
       .faq-a{display:none;padding:0 4px 18px;color:var(--muted);font-size:14px;line-height:1.7;max-width:68ch}
       .faq-item.open .faq-a{display:block}
       /* ---------- modal ---------- */
-      .modal{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;background:rgba(8,8,9,.78);backdrop-filter:blur(4px)}
+      .modal{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;background:rgba(8,8,9,.78)}
       .modal.show{display:flex}
       .modalbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;background:var(--surface);border-bottom:1px solid var(--line);border-top:3px solid var(--accent)}
       .modalbar .name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:18px;margin-right:auto}
@@ -273,6 +279,14 @@
           <button class="btn" id="btnCustom" type="button">+ Tempel Kode Sendiri</button>
         </div>
         <div class="chips" id="chips"></div>
+        <div class="moderow">
+          <span class="lbl">Katalog</span>
+          <div class="seg" role="group" aria-label="Mode katalog">
+            <button type="button" id="modeTotal" class="active">TOTAL 1.000</button>
+            <button type="button" id="modePer">1.000 PER WARNA</button>
+          </div>
+          <span class="modeinfo" id="modeInfo">1.000 template dari katalog terbaru — terbagi merata ke 12 keluarga warna.</span>
+        </div>
       </div>
     </div>
 
@@ -313,7 +327,7 @@
         <div class="faq" id="faq">
           <div class="faq-item">
             <button type="button" class="faq-q" aria-expanded="false"><b>Apakah template di galeri ini benar-benar gratis?</b><span class="pm" aria-hidden="true">+</span></button>
-            <div class="faq-a">Ya, sepenuhnya. Seluruh 1200 template boleh diunduh, disalin, dan dipakai tanpa biaya, tanpa membuat akun, dan tanpa batas waktu pemakaian.</div>
+            <div class="faq-a">Ya, sepenuhnya. Seluruh <span class="tplN">1.000</span> template boleh diunduh, disalin, dan dipakai tanpa biaya, tanpa membuat akun, dan tanpa batas waktu pemakaian.</div>
           </div>
           <div class="faq-item">
             <button type="button" class="faq-q" aria-expanded="false"><b>Bolehkah dipakai untuk proyek klien atau keperluan komersial?</b><span class="pm" aria-hidden="true">+</span></button>
@@ -348,6 +362,7 @@
         <div class="rule-orn" aria-hidden="true"><span></span></div>
         <p class="statement">Koleksi ini disusun dengan satu keyakinan: desain yang anggun layak dimiliki siapa saja.</p>
         <p>Semua template di galeri ini adalah satu file HTML mandiri (CSS menempel di dalam file) — tanpa gambar eksternal, tanpa dependensi, tinggal salin dan sesuaikan teks, warna, dan isinya dengan kebutuhanmu.</p>
+        <p class="edition">EDISI RINGAN · DIPERBARUI 25 OKTOBER 2025</p>
       </footer>
     </div>
 
@@ -407,6 +422,26 @@
        buildDoc() membungkusnya menjadi file HTML utuh yang mandiri.
        ============================================================ */
     function buildDoc(t){
+      if (t.gen){
+        /* Varian prosedural (Mode B): dokumen dibangun dari parameter
+           variannya — pola dasar + palet pengganti dari bank keluarga. */
+        var base = null;
+        for (var gi = 0; gi < FULL.length; gi++){ if (FULL[gi].id === t.base){ base = FULL[gi]; break; } }
+        if (!base) return "";
+        var doc = buildDoc(base);
+        for (var gj = 0; gj < base.p.length; gj++){
+          var tok = "" + gj + "";
+          doc = doc.split(base.p[gj]).join(tok);
+          var up = base.p[gj].toUpperCase(), lo = base.p[gj].toLowerCase();
+          if (up !== base.p[gj]) doc = doc.split(up).join(tok);
+          if (lo !== base.p[gj] && lo !== up) doc = doc.split(lo).join(tok);
+        }
+        for (var gk = 0; gk < base.p.length; gk++){
+          doc = doc.split("" + gk + "").join(t.p[gk] || base.p[gk]);
+        }
+        doc = doc.replace(/<title>[\s\S]*?<\/title>/, "<title>" + t.n + "</title>");
+        return doc;
+      }
       return "<!doctype html>\n<html lang=\"id\">\n<head>\n<meta charset=\"utf-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<title>" + t.n + "</title>\n<style>\n" + t.s + "\n</style>\n</head>\n<body>\n" + t.h + "\n</body>\n</html>";
     }
 
@@ -5293,7 +5328,10 @@
     ];
     var LICENSE = "Gratis — bebas pakai pribadi & komersial";
     var TECH = "HTML · CSS · JavaScript — satu berkas mandiri";
-    function specOf(t){ return SPECS[t.id] || { typo: "Serif / sans bawaan tema", fam: [] }; }
+    function specOf(t){
+      if (t && t.gen){ var bs = SPECS[t.base] || {}; return { typo: bs.typo || "Serif / sans bawaan tema", fam: [t.famName] }; }
+      return SPECS[t.id] || { typo: "Serif / sans bawaan tema", fam: [] };
+    }
     function fileKB(t){ return (buildDoc(t).length / 1024).toFixed(1).replace(".", ",") + " KB"; }
 
     /* Koleksi Saya — tersimpan hanya di peramban ini, tanpa akun.
@@ -5311,28 +5349,125 @@
     var chipsBox = document.getElementById("chips");
     var qInput = document.getElementById("q");
     var emptyBox = document.getElementById("empty");
-    var state = { cat: "semua", q: "", sort: "kategori", color: null, shown: 24, cmpShown: 24 };
+    var state = { cat: "semua", q: "", sort: "kategori", color: null, shown: 12, cmpShown: 12 };
 
     document.getElementById("statTpl").textContent = TEMPLATES.length;
     document.getElementById("statCat").textContent = CATS.length;
+
+    /* ============================================================
+       MODE KATALOG — dua cara membaca koleksi yang sama:
+       A "TOTAL 1.000" (bawaan): tepat 1.000 template dari katalog
+         penuh, terbagi merata ke 12 keluarga warna (4 keluarga x 84
+         + 8 keluarga x 83); urutan katalog asli dipertahankan,
+         termasuk template lama No 1-34.
+       B "1.000 PER WARNA": tepat 1.000 entri per keluarga warna
+         (12.000 total) — 100 template asli tiap keluarga ditambah
+         900 varian prosedural. Varian dibangun seketika dari pola,
+         bank palet, dan bank nama keluarga itu; tidak ada berkas
+         HTML utuh yang disimpan untuknya — dokumennya dihasilkan
+         dari parameternya oleh buildDoc() saat dibuka.
+       ============================================================ */
+    var FULL = TEMPLATES;
+    function famNameOf(t){ var f = specOf(t).fam; return (f && f.length) ? f[0] : ""; }
+    var famIdx = {}; FAMS.forEach(function(f, i){ famIdx[f.n] = i; });
+    var MODE_A = (function(){
+      var rank = {};
+      return FULL.filter(function(t){
+        var fam = famNameOf(t);
+        rank[fam] = (rank[fam] || 0) + 1;
+        return rank[fam] <= (famIdx[fam] < 4 ? 84 : 83);
+      });
+    })();
+    var NAME_A = ["Senja","Fajar","Embun","Kala","Rimba","Tirta","Wira","Saka","Laras","Mega","Bayu","Candra","Dipa","Gita","Harsa","Indra","Jaya","Kirana","Langit","Madu","Nara","Pala","Rasi","Sinta","Tunas","Utama","Wulan","Yasa","Zahra","Arun"];
+    var NAME_B = ["Karya","Rasa","Citra","Warna","Griya","Kencana","Loka","Mulia","Nusa","Pesona","Rupa","Swara","Tama","Wastu","Yudha","Abadi","Bestari","Cahya","Dharma","Elang","Fajar","Graha","Hutama","Intan","Jelita","Karsa","Laksana","Mahesa","Nirmala","Prakarsa"];
+    function famSlug(n){ return n.toLowerCase().replace(/\s+/g, "-"); }
+    var MODE_B = (function(){
+      var out = FULL.slice();
+      var usedNames = {};
+      FULL.forEach(function(t){ usedNames[t.n] = 1; });
+      FAMS.forEach(function(f){
+        var bases = FULL.filter(function(t){ return famNameOf(t) === f.n; });
+        var pals = bases.map(function(t){ return t.p; });
+        for (var v = 0; v < 900; v++){
+          var base = bases[v % bases.length];
+          var pal = pals[(v * 7 + 13) % pals.length];
+          if (pal === base.p) pal = pals[(v * 7 + 14) % pals.length];
+          var nm = NAME_A[v % 30] + " " + NAME_B[Math.floor(v / 30) % 30] + " — " + catName(base.cat);
+          if (usedNames[nm]) nm += " " + f.n;
+          usedNames[nm] = 1;
+          out.push({
+            id: "varian-" + famSlug(f.n) + "-" + (v + 1),
+            cat: base.cat, n: nm,
+            d: "Varian prosedural dari pola “" + base.n + "”: tata letak dan isi mengikuti pola aslinya, dipadukan dengan palet lain dari keluarga warna " + f.n + ". Dokumennya dihasilkan seketika dari parameter varian ini saat dibuka.",
+            p: pal.slice(), tags: base.tags.slice(),
+            gen: true, base: base.id, famName: f.n
+          });
+        }
+      });
+      return out;
+    })();
+    var MODE_CUR = "total";
+    TEMPLATES = MODE_A;
+
+    /* Hitungan chip kategori & warna dihitung sekali per mode aktif. */
+    var chipCounts = null;
+    function ensureCounts(){
+      if (chipCounts) return;
+      chipCounts = { cats: {}, fams: {}, ed: 0 };
+      CATS.forEach(function(c){ chipCounts.cats[c.id] = 0; });
+      FAMS.forEach(function(f){ chipCounts.fams[f.n] = 0; });
+      TEMPLATES.forEach(function(t){
+        if (chipCounts.cats[t.cat] !== undefined) chipCounts.cats[t.cat]++;
+        var fam = famNameOf(t);
+        if (chipCounts.fams[fam] !== undefined) chipCounts.fams[fam]++;
+        if (specOf(t).ed) chipCounts.ed++;
+      });
+    }
+    function fmtN(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+    function updateCounts(){
+      document.getElementById("statTpl").textContent = TEMPLATES.length;
+      document.querySelectorAll(".tplN").forEach(function(el){ el.textContent = fmtN(TEMPLATES.length); });
+      document.querySelectorAll("meta[name='description'], meta[property='og:description'], meta[name='twitter:description'], meta[property='og:title'], meta[name='twitter:title']").forEach(function(m){
+        var c = m.getAttribute("content") || "";
+        m.setAttribute("content", c.replace(/\d[\d.]*\s+(desain|Desain)/g, fmtN(TEMPLATES.length) + " $1"));
+      });
+    }
+    function setMode(m){
+      MODE_CUR = m;
+      TEMPLATES = (m === "perwarna") ? MODE_B : MODE_A;
+      chipCounts = null;
+      state.cat = "semua"; state.q = ""; qInput.value = ""; state.color = null;
+      state.shown = 12; state.cmpShown = 12;
+      document.getElementById("modeTotal").classList.toggle("active", m === "total");
+      document.getElementById("modePer").classList.toggle("active", m === "perwarna");
+      document.getElementById("modeInfo").textContent = (m === "perwarna")
+        ? "12.000 entri — 1.000 per keluarga warna: template asli plus varian prosedural yang dihasilkan seketika dari pola, palet, dan bank nama tiap keluarga."
+        : "1.000 template dari katalog terbaru — terbagi merata ke 12 keluarga warna.";
+      updateCounts();
+      renderColors();
+      render();
+      renderCmp();
+    }
+    document.getElementById("modeTotal").addEventListener("click", function(){ if (MODE_CUR !== "total") setMode("total"); });
+    document.getElementById("modePer").addEventListener("click", function(){ if (MODE_CUR !== "perwarna") setMode("perwarna"); });
+    updateCounts();
 
     function catName(id){ for (var i=0;i<CATS.length;i++) if (CATS[i].id===id) return CATS[i].name; return id; }
     function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
     function renderChips(){
+      ensureCounts();
       var html = "<button type='button' class='chip" + (state.cat==="semua"?" active":"") + "' data-cat='semua'>Semua<small>" + TEMPLATES.length + "</small></button>";
       CATS.forEach(function(c){
-        var n = TEMPLATES.filter(function(t){return t.cat===c.id;}).length;
-        html += "<button type='button' class='chip" + (state.cat===c.id?" active":"") + "' data-cat='" + c.id + "'>" + esc(c.name) + "<small>" + n + "</small></button>";
+        html += "<button type='button' class='chip" + (state.cat===c.id?" active":"") + "' data-cat='" + c.id + "'>" + esc(c.name) + "<small>" + chipCounts.cats[c.id] + "</small></button>";
       });
-      var edN = TEMPLATES.filter(function(t){ return specOf(t).ed; }).length;
-      html += "<button type='button' class='chip" + (state.cat==="editor"?" active":"") + "' data-cat='editor'>Pilihan Editor<small>" + edN + "</small></button>";
+      html += "<button type='button' class='chip" + (state.cat==="editor"?" active":"") + "' data-cat='editor'>Pilihan Editor<small>" + chipCounts.ed + "</small></button>";
       html += "<button type='button' class='chip" + (state.cat==="koleksi"?" active":"") + "' data-cat='koleksi'>Koleksi Saya<small>" + savedCount() + "</small></button>";
       chipsBox.innerHTML = html;
       chipsBox.querySelectorAll(".chip").forEach(function(ch){
         ch.addEventListener("click", function(){
           state.cat = ch.getAttribute("data-cat");
-          state.shown = 24;
+          state.shown = 12;
           render();
         });
       });
@@ -5352,6 +5487,23 @@
       var f = wrap.querySelector("iframe");
       if (f) f.style.transform = "scale(" + (wrap.clientWidth / 1280) + ")";
     }
+
+    /* Cuplikan hidup dimuat malas: srcdoc hanya dipasang saat kartu
+       mendekati layar (margin 600px) dan dilepas lagi saat menjauh,
+       agar daftar kartu tetap ringan walau katalognya besar. */
+    function loadThumb(w){
+      var f = w.querySelector("iframe");
+      if (!f || f.getAttribute("srcdoc")) return;
+      var t = byId(f.getAttribute("data-tid"));
+      if (t) f.setAttribute("srcdoc", buildDoc(t));
+    }
+    function unloadThumb(w){
+      var f = w.querySelector("iframe");
+      if (f) f.removeAttribute("srcdoc");
+    }
+    var thumbIO = ("IntersectionObserver" in window) ? new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) loadThumb(en.target); else unloadThumb(en.target); });
+    }, { rootMargin: "600px" }) : null;
 
     var RN = ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"];
 
@@ -5428,9 +5580,7 @@
 
       main.querySelectorAll(".thumb").forEach(function(w){
         fitThumb(w);
-        var f = w.querySelector("iframe");
-        var t = byId(f.getAttribute("data-tid"));
-        if (t) f.setAttribute("srcdoc", buildDoc(t));
+        if (thumbIO) thumbIO.observe(w); else loadThumb(w);
       });
       main.querySelectorAll("[data-open]").forEach(function(el){
         el.addEventListener("click", function(){ openPreview(el.getAttribute("data-open")); });
@@ -5450,21 +5600,25 @@
       document.querySelectorAll(".thumb").forEach(fitThumb);
     });
 
+    var qTimer = null;
     qInput.addEventListener("input", function(){
-      state.q = qInput.value.trim().toLowerCase();
-      state.shown = 24;
-      render();
+      clearTimeout(qTimer);
+      qTimer = setTimeout(function(){
+        state.q = qInput.value.trim().toLowerCase();
+        state.shown = 12;
+        render();
+      }, 200);
     });
 
     document.getElementById("loadMore").addEventListener("click", function(){
-      state.shown += 24;
+      state.shown += 12;
       render();
     });
 
     var sortSel = document.getElementById("sortSel");
     sortSel.addEventListener("change", function(){
       state.sort = sortSel.value;
-      state.shown = 24;
+      state.shown = 12;
       render();
     });
 
@@ -5647,9 +5801,10 @@
        ============================================================ */
     var colorRow = document.getElementById("colorRow");
     function renderColors(){
+      ensureCounts();
       var html = "<span class='clbl'>Warna</span>";
       FAMS.forEach(function(f){
-        var nFam = TEMPLATES.filter(function(t){ return specOf(t).fam.indexOf(f.n) !== -1; }).length;
+        var nFam = chipCounts.fams[f.n] || 0;
         if (!nFam) return;
         html += "<button type='button' class='swbtn" + (state.color === f.n ? " active" : "") + "' data-color='" + f.n + "' aria-pressed='" + (state.color === f.n ? "true" : "false") + "'><span class='sw' style='background:" + f.c + "'></span>" + f.n + "<small>" + nFam + "</small></button>";
       });
@@ -5658,7 +5813,7 @@
         b.addEventListener("click", function(){
           var c = b.getAttribute("data-color");
           state.color = state.color === c ? null : c;
-          state.shown = 24;
+          state.shown = 12;
           renderColors();
           render();
         });
@@ -5689,7 +5844,7 @@
     }
     renderCmp();
     document.getElementById("cmpMore").addEventListener("click", function(){
-      state.cmpShown += 24;
+      state.cmpShown += 12;
       renderCmp();
     });
 

@@ -66,7 +66,12 @@
       .stat span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
       @media (max-width:560px){ .stat{padding:16px 20px} .stat + .stat{border-left:0} }
       /* ---------- toolbar ---------- */
-      .toolbar{position:sticky;top:0;z-index:40;background:var(--bg);padding:16px 0 12px;border-bottom:1px solid var(--line);box-shadow:0 16px 28px -24px rgba(20,20,22,.5)}
+      /* Seluruh bar kontrol menempel bersama sebagai satu kesatuan di puncak
+         layar saat halaman digulir: pencarian, Urutkan, Tempel Kode Sendiri,
+         chip kategori, dan baris Warna berada dalam satu wadah sticky. */
+      .controlbar{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 16px 28px -24px rgba(20,20,22,.5)}
+      .toolbar{padding:16px 0 2px}
+      .colorbar{padding:0 0 10px}
       .searchrow{display:flex;gap:10px;flex-wrap:wrap}
       .search{flex:1 1 260px;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:0 16px}
       .search svg{flex:none;color:var(--muted)}
@@ -108,7 +113,6 @@
       .thumb{position:relative;height:128px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);cursor:pointer}
       .thumb iframe{position:absolute;top:0;left:0;width:1280px;height:960px;border:0;transform-origin:0 0;pointer-events:none;background:#fff}
       .thumb::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(to bottom, rgba(255,255,255,0), var(--surface) 92%);pointer-events:none;z-index:1}
-      .thumb .open{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:2;background:var(--surface);color:var(--ink);border:1px solid var(--accent);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border-radius:0;padding:8px 15px;white-space:nowrap;box-shadow:0 5px 12px rgba(0,0,0,.22)}
       /* Kartu sengaja minimal: hanya cuplikan, nomor, nama, dan kategori.
          Deskripsi, palet, dan tag lengkap tampil di panel info pratinjau. */
       .cardbody{padding:14px 18px 18px;display:flex;flex-direction:column;gap:5px;flex:1}
@@ -250,6 +254,7 @@
       </header>
     </div>
 
+    <div class="controlbar">
     <div class="toolbar">
       <div class="wrap">
         <div class="searchrow">
@@ -268,8 +273,14 @@
           <button class="btn" id="btnCustom" type="button">+ Tempel Kode Sendiri</button>
         </div>
         <div class="chips" id="chips"></div>
+      </div>
+    </div>
+
+    <div class="colorbar">
+      <div class="wrap">
         <div class="colorrow" id="colorRow"></div>
       </div>
+    </div>
     </div>
 
     <main class="wrap" id="main"></main>
@@ -5352,7 +5363,7 @@
       var plaque = sp.ed ? "<span class='plaque'>Pilihan Editor</span>" : (sp.baru ? "<span class='plaque'>Baru</span>" : "");
       var mark = isSaved(t.id) ? "<span class='savedmark' title='Tersimpan di Koleksi Saya'><svg width='15' height='19' viewBox='0 0 12 16' aria-hidden='true'><path d='M1.5 1h9v13.5L6 11l-4.5 3.5z' fill='currentColor'/></svg></span>" : "";
       return "<article class='card' data-id='" + t.id + "'>"
-        + "<div class='thumb' data-open='" + t.id + "' title='Tekan untuk melihat pratinjau lengkap'><iframe title='Cuplikan " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe><span class='open'>Tekan untuk lihat semua</span>" + mark + "</div>"
+        + "<div class='thumb' data-open='" + t.id + "'><iframe title='Cuplikan " + esc(t.n) + "' data-tid='" + t.id + "' sandbox=''></iframe>" + mark + "</div>"
         + "<div class='cardbody'><div class='norow'><span class='no'>Nº " + (no < 10 ? "0" + no : "" + no) + "</span>" + plaque + "</div><h3>" + esc(t.n) + "</h3><span class='catlbl'>" + esc(catName(t.cat)) + "</span>"
         + "<div class='actions'><button type='button' class='btn primary grow' data-open='" + t.id + "'>Lihat Pratinjau</button></div>"
         + "</div></article>";

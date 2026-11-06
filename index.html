@@ -8,7 +8,7 @@
     <meta property="og:title" content="Galeri Template Website — 1.000 Desain Gratis &amp; Elegan" />
     <meta property="og:description" content="Galeri template website gratis yang elegan — 1.000 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://muse.ai/s/galeri-template-website-xjxf6udxaxpa6xvd" />
+    <meta property="og:url" content="https://muse.ai/s/galeri-template-website-xjxf6udxaxpa6xvd/DjYegxQ1C9iszHteHKbkLbt_KDOFyiL_G3XpPetkDAw" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Galeri Template Website — 1.000 Desain Gratis &amp; Elegan" />
     <meta name="twitter:description" content="Galeri template website gratis yang elegan — 1.000 desain dalam 12 kategori. Lihat pratinjau, salin, dan unduh kode HTML siap pakai." />
@@ -240,6 +240,16 @@
         header.top{padding-top:52px}
         .modalbar .name{width:100%;margin-right:0}
       }
+      /* Layar sempit: baris saringan tidak lagi digeser menyamping —
+         chip kategori dan tombol warna membungkus ke baris berikutnya
+         agar semuanya terlihat & terjangkau tanpa menggeser, dan bilah
+         kontrol tidak menempel agar bungkusan itu tidak memakan layar. */
+      @media (max-width:720px){
+        .controlbar{position:static}
+        .chips{flex-wrap:wrap;overflow:visible}
+        .colorrow{flex-wrap:wrap;overflow:visible}
+        .chip{padding:9px 13px}
+      }
     </style>
   </head>
   <body>
@@ -266,7 +276,7 @@
         <div class="searchrow">
           <label class="search">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
-            <input id="q" type="search" placeholder="Cari template… misalnya “kopi”, “properti”, “dokter”" autocomplete="off" />
+            <input id="q" type="search" aria-label="Cari template" placeholder="Cari template… misalnya “kopi”, “properti”, “dokter”" autocomplete="off" />
           </label>
           <label class="sortbox">
             <span class="lbl">Urutkan</span>
@@ -362,12 +372,12 @@
         <div class="rule-orn" aria-hidden="true"><span></span></div>
         <p class="statement">Koleksi ini disusun dengan satu keyakinan: desain yang anggun layak dimiliki siapa saja.</p>
         <p>Semua template di galeri ini adalah satu file HTML mandiri (CSS menempel di dalam file) — tanpa gambar eksternal, tanpa dependensi, tinggal salin dan sesuaikan teks, warna, dan isinya dengan kebutuhanmu.</p>
-        <p class="edition">EDISI RINGAN · DIPERBARUI 25 OKTOBER 2025</p>
+        <p class="edition">EDISI RINGAN · DIPERBARUI 6 NOVEMBER 2026</p>
       </footer>
     </div>
 
     <!-- Preview modal -->
-    <div class="modal" id="previewModal" role="dialog" aria-modal="true">
+    <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-label="Pratinjau template">
       <div class="modalbar">
         <div class="name" id="pvName">Template<span id="pvCat"></span></div>
         <div class="seg" id="pvSeg">
@@ -403,7 +413,7 @@
     </div>
 
     <!-- Code modal -->
-    <div class="modal" id="codeModal" role="dialog" aria-modal="true">
+    <div class="modal" id="codeModal" role="dialog" aria-modal="true" aria-label="Kode template">
       <div class="modalbar">
         <div class="name" id="cdName">Kode Template<span>HTML lengkap — siap disalin</span></div>
         <button class="btn" id="cdCopy" type="button">Salin Kode</button>
@@ -5381,7 +5391,11 @@
     var NAME_A = ["Senja","Fajar","Embun","Kala","Rimba","Tirta","Wira","Saka","Laras","Mega","Bayu","Candra","Dipa","Gita","Harsa","Indra","Jaya","Kirana","Langit","Madu","Nara","Pala","Rasi","Sinta","Tunas","Utama","Wulan","Yasa","Zahra","Arun"];
     var NAME_B = ["Karya","Rasa","Citra","Warna","Griya","Kencana","Loka","Mulia","Nusa","Pesona","Rupa","Swara","Tama","Wastu","Yudha","Abadi","Bestari","Cahya","Dharma","Elang","Fajar","Graha","Hutama","Intan","Jelita","Karsa","Laksana","Mahesa","Nirmala","Prakarsa"];
     function famSlug(n){ return n.toLowerCase().replace(/\s+/g, "-"); }
-    var MODE_B = (function(){
+    /* Katalog mode B dibangun malas: 10.800 varian hanya dibuat saat
+       mode "1.000 PER WARNA" pertama kali dipilih, agar muatan awal
+       halaman tidak membayar pekerjaan yang belum tentu dipakai. */
+    var MODE_B = null;
+    function buildModeB(){
       var out = FULL.slice();
       var usedNames = {};
       FULL.forEach(function(t){ usedNames[t.n] = 1; });
@@ -5405,7 +5419,7 @@
         }
       });
       return out;
-    })();
+    }
     var MODE_CUR = "total";
     TEMPLATES = MODE_A;
 
@@ -5434,7 +5448,7 @@
     }
     function setMode(m){
       MODE_CUR = m;
-      TEMPLATES = (m === "perwarna") ? MODE_B : MODE_A;
+      TEMPLATES = (m === "perwarna") ? (MODE_B || (MODE_B = buildModeB())) : MODE_A;
       chipCounts = null;
       state.cat = "semua"; state.q = ""; qInput.value = ""; state.color = null;
       state.shown = 12; state.cmpShown = 12;
